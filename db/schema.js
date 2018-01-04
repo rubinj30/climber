@@ -16,7 +16,7 @@ const ClimbSchema = new Schema(
     funRating: String,
     completed: Boolean,
     gearNeeded: String,
-    photos: String,
+    photo: String,
   },
   {
     timestamps: {}
@@ -84,7 +84,7 @@ const UserSchema = new Schema(
       type: String,
       default: 'N/A'
     },
-    userPhoto: {
+    photo: {
       type: String,
       default: 'https://goo.gl/yYQiTT'
     },

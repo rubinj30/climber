@@ -29,7 +29,7 @@ User.remove({}).then(() => {
         sportClimbGrade: '5.15',
         tradGrad: '5.14',
         boulderGrade: 'V16',
-        userPhoto: 'http://www.telegraph.co.uk/content/dam/news/2016/11/23/adam-ondra-instagram_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg?imwidth=450'
+        photo: 'http://www.telegraph.co.uk/content/dam/news/2016/11/23/adam-ondra-instagram_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg?imwidth=450'
     })
     const boatRock = new Destination({
         name: 'Boat Rock', 
@@ -85,7 +85,7 @@ User.remove({}).then(() => {
         homeState: 'GA',
         sportClimbGrade: '5.14',
         boulderGrade: 'V13',
-        userPhoto: 'https://cdn-files.apstatic.com/climb/109451567_medium_1494350546.jpg'     
+        photo: 'https://cdn-files.apstatic.com/climb/109451567_medium_1494350546.jpg'     
     })
     return lynnHill.save()
 
