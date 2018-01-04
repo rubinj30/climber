@@ -7,7 +7,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI); 
+mongoose.connect(process.env.MONGODB_URI, {
+  useMongoClient: true
+}); 
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -47,9 +49,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const PORT = process.env.PORT || 3000
-app.listen(PORT, () => {
-  console.log(`Express app listening on port ${PORT}`)
-})
+// const PORT = process.env.PORT || 3000
+// app.listen(PORT, () => {
+//   console.log(`Express app listening on port ${PORT}`)
+// })
 
 module.exports = app;
