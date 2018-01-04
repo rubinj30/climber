@@ -22,11 +22,12 @@ User.remove({}).then(() => {
         email: 'adam@me.com',
         age: 25,
         gender: 'Male',
-        livesIn: 'Marietta, GA',
+        livesIn: 'Marietta, GA'
+
         // sportClimbGrade: '5.15',
         // tradGrad: '5.14',
         // boulderGrade: 'V16',
-        photo: 'http://www.telegraph.co.uk/content/dam/news/2016/11/23/adam-ondra-instagram_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg?imwidth=450'
+        // photo: 'http://www.telegraph.co.uk/content/dam/news/2016/11/23/adam-ondra-instagram_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg?imwidth=450'
     })
     const boatRock = new Destination({
         name: 'Boat Rock',
@@ -74,10 +75,12 @@ User.remove({}).then(() => {
     const lynnHill = new User({
         username: 'lynnster',
         email: 'lynn@gmail.com',
-        livesIn: 'Jasper, GA',
+        age: 50,
+        gender: 'Female',
+        livesIn: 'Jasper, GA'
         // sportClimbGrade: '5.14',
         // boulderGrade: 'V13',
-        photo: 'https://cdn-files.apstatic.com/climb/109451567_medium_1494350546.jpg'
+        // photo: 'https://cdn-files.apstatic.com/climb/109451567_medium_1494350546.jpg'
     })
     return lynnHill.save()
 
