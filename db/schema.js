@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+console.log("hello?")
 mongoose.Promise = global.Promise
 
 const ClimbSchema = new Schema(
