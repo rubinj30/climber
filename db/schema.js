@@ -34,7 +34,12 @@ const DestinationSchema = new Schema(
     state: String,
     latitude: String,
     longitude: String,
-    typeOfClimbing: String,
+    typeOfClimbing: {
+        type: String,
+        // Danny suggested radio buttons
+        enum: ['BOULDER', 'TRAD', 'SPORT', 'ALPINE', 'ICE']
+    },
+    indoorOrOutdoor: String,
     description: {
         type: String
     },

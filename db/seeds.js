@@ -5,9 +5,7 @@ const Destination = require('./models/Destination')
 const Climb = require('./models/Climb')
 
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGODB_URI, {
-    useMongoClient: true
-})
+mongoose.connect(process.env.MONGODB_URI)
 
 mongoose.connection.once('open', () => {
     console.log('connected to Mongo DB!')
