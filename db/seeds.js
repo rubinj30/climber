@@ -77,6 +77,18 @@ User.remove({}).then(() => {
     sandRock.climbs.push(misty)
     adamOndra.destinations.push(boatRock, sandRock)
     return adamOndra.save()    
+}).then(() => {
+    const lynnHill = new User({
+        username: 'lynnster',
+        email: 'lynn@gmail.com',
+        homeCity: 'Jasper',
+        homeState: 'GA',
+        sportClimbGrade: '5.14',
+        boulderGrade: 'V13',
+        userPhoto: 'https://cdn-files.apstatic.com/climb/109451567_medium_1494350546.jpg'     
+    })
+    return lynnHill.save()
+
 }).catch((err) => {
     console.log(`*** ERROR SEEDING DATA ${err}`)
 }).then(() => {
