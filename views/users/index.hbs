@@ -2,11 +2,18 @@
 <div>
     {{#each users}}
         <div class='index-photo-div'>
-            <img class='climber-photo index-photo' src="{{this.photo}}" alt='climber\'s photo'>
+            <a href="/users/{{this._id}}">
+                <img class='climber-photo index-photo' src="{{this.photo}}" alt='climber\'s photo'>
+            </a>
         </div>
         <div>
-            {{this.username}}
+            <a href="/users/{{this._id}}">{{this.username}}</a>
+        </div>
+        <div>
             {{this.age}} - {{this.gender}}
         </div>
     {{/each}}
+</div>
+<div class='bottom-of-page-button'>
+    <a class='button-text' href="/users/new">Add New Climber</a>
 </div>

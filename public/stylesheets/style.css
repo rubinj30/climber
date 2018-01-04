@@ -15,3 +15,12 @@ a {
 * { 
   border: black 1px solid;
 }
+
+.bottom-of-page-button {
+  background-color: #333333;
+}
+
+.button-text {
+  color: white;
+  text-decoration: none;
+}
