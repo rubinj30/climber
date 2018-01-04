@@ -3,14 +3,14 @@
 </div>
 <div>
     {{#each users}}
+    <a href="/users/{{this._id}}">
         <div class='index-photo-div'>
-            <a href="/users/{{this._id}}">
-                <img class='climber-photo index-photo' src="{{this.photo}}" alt='climber\'s photo'>
-            </a>
+            <img class='climber-photo index-photo' src="{{this.photo}}" alt='climber\'s photo'>
         </div>
         <div>
-            <a href="/users/{{this._id}}">{{this.username}}</a>
+            {{this.username}}
         </div>
+    </a>    
         <div>
             {{this.age}} - {{this.gender}}
         </div>

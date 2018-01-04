@@ -34,7 +34,6 @@ router.get('/:userId', (request, response) => {
     })
   })
 
-
 router.post('/',  (request, response) => {
   const newUserInfo = request.body
   User.create(newUserInfo)
@@ -46,6 +45,14 @@ router.post('/',  (request, response) => {
       })
 })
 
+router.get('/:userId/delete', (request, response) => {
+  const userId = request.params.userId
+  console.log(User.findById(userId))
+  User.findByIdAndRemove(userId)
+      .then(() => {
+          response.redirect('/users')
+      })
+})
 
 
 
