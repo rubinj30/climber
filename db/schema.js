@@ -55,8 +55,7 @@ const UserSchema = new Schema(
   {
     username: {
       type: String,
-      required: [ true, 'Username is required' ],
-      unique: [ true, 'Username must not already be in use']
+      required: [ true, 'Username is required' ]
     },
     email: String,
     age: Number,
@@ -66,6 +65,7 @@ const UserSchema = new Schema(
         type: Date,
         default: Date.now
     },
+    likesToClimb: String,
     // sportClimbGrade: {
     //   type: String,
     //   default: 'N/A'

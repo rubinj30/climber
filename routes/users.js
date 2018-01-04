@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router({mergeParams: true});
 const User = require('../db/models/User')
 const bodyParser = require('body-parser')
 
@@ -21,16 +21,18 @@ router.get('/new', (request, response) => {
   response.render('users/new', { pageTitle: 'New User' })
 })
 
-router.get('/:id', (request, response) => {
+router.get('/:userId', (request, response) => {
+
   const userId = request.params.userId
+  console.log(userId)
   User.findById(userId)
     .then((user) => {
       response.render('users/show', {
         pageTitle: 'Climber Profile',
         user
       })
+    })
   })
-})
 
 
 router.post('/',  (request, response) => {

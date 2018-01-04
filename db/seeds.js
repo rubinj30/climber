@@ -23,6 +23,7 @@ User.remove({}).then(() => {
         age: 25,
         gender: 'Male',
         livesIn: 'Marietta, GA'
+        likesToClimb: 'Sport'
 
         // sportClimbGrade: '5.15',
         // tradGrad: '5.14',
@@ -77,7 +78,8 @@ User.remove({}).then(() => {
         email: 'lynn@gmail.com',
         age: 50,
         gender: 'Female',
-        livesIn: 'Jasper, GA'
+        livesIn: 'Jasper, GA',
+        likesToClimb: 'Traditional'
         // sportClimbGrade: '5.14',
         // boulderGrade: 'V13',
         // photo: 'https://cdn-files.apstatic.com/climb/109451567_medium_1494350546.jpg'
