@@ -15,8 +15,8 @@ const ClimbSchema = new Schema(
     grade: String,
     funRating: String,
     completed: Boolean,
-    gearNeeded: [],
-    photos: [],
+    gearNeeded: String,
+    photos: String,
   },
   {
     timestamps: {}
@@ -37,7 +37,7 @@ const DestinationSchema = new Schema(
     typeOfClimbing: {
         type: String,
         // Danny suggested radio buttons
-        enum: ['BOULDER', 'TRAD', 'SPORT', 'ALPINE', 'ICE']
+        enum: ['BOULDERING', 'TRAD CLIMBING', 'SPORT CLIMBING', 'ALPINE CLIMBING', 'ICE CLIMBING']
     },
     indoorOrOutdoor: String,
     description: {
@@ -66,14 +66,24 @@ const UserSchema = new Schema(
     lastName: String,
     age: Number,
     gender: String,
-    homebase: String,
+    homeCity: String,
+    homeState: String,
     userCreated: {
         type: Date,
         default: Date.now
     },
-    sportClimbGrade: String,
-    boulderGrade: String,
-    tradGrade: String,
+    sportClimbGrade: {
+      type: String,
+      default: 'N/A'
+    },
+    boulderGrade: {
+      type: String,
+      default: 'N/A'
+    },
+    tradGrade: {
+      type: String,
+      default: 'N/A'
+    },
     userPhoto: {
       type: String,
       default: 'https://goo.gl/yYQiTT'
