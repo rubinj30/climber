@@ -12,12 +12,8 @@ const ClimbSchema = new Schema(
     type: {
       type: String
     },
-    grade: {
-      type: String
-    },
-    funRating: {
-      type: String
-    },
+    grade: String,
+    funRating: String,
     completed: Boolean,
     gearNeeded: [],
     photos: [],
@@ -33,18 +29,11 @@ const DestinationSchema = new Schema(
       type: String,
       required: [ true, 'Destination name is required' ]
     },
-    city: {
-      type: String
-    },
-    state: {
-        type: String
-    },
-    latitude: {
-        type: String
-    },
-    longitude: {
-        type: String
-    },
+    city: String,
+    cragType: String,
+    state: String,
+    latitude: String,
+    longitude: String,
     typeOfClimbing: String,
     description: {
         type: String
@@ -67,22 +56,24 @@ const UserSchema = new Schema(
       required: [ true, 'Username is required' ],
       unique: [ true, 'Username must not already be in use']
     },
-    email: {
-      type: String
+    email: String,
+    firstName: String,
+    lastName: String,
+    age: Number,
+    gender: String,
+    homebase: String,
+    userCreated: {
+        type: Date,
+        default: Date.now
     },
-    firstName: {
+    sportClimbGrade: String,
+    boulderGrade: String,
+    tradGrade: String,
+    userPhoto: {
       type: String,
-      required: [ true, 'First name is required!' ]
+      default: 'https://goo.gl/yYQiTT'
     },
-    lastName: {
-      type: String,
-      required: [ true, 'Last name is required!' ]
-    },
-    photoUrl: {
-      type: String,
-      default: 'https://cdn.vectorstock.com/i/thumb-large/66/69/santa-hat-vector-296669.jpg'
-    },
-    stores: [ StoreSchema ]
+    stores: [ DestinationSchema ]
   },
   {
     timestamps: {},
