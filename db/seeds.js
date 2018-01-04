@@ -18,25 +18,21 @@ mongoose.connection.on('error', (error) => {
 
 User.remove({}).then(() => {
     const adamOndra = new User({
-        username: 'ondrazilla',
+        username: 'AdOndraZilla',
         email: 'adam@me.com',
-        firstName: 'Adam',
-        lastName: 'Ondra',
         age: 25,
         gender: 'Male',
-        homeCity: 'Marietta',
-        homeState: 'GA',
-        sportClimbGrade: '5.15',
-        tradGrad: '5.14',
-        boulderGrade: 'V16',
+        livesIn: 'Marietta, GA',
+        // sportClimbGrade: '5.15',
+        // tradGrad: '5.14',
+        // boulderGrade: 'V16',
         photo: 'http://www.telegraph.co.uk/content/dam/news/2016/11/23/adam-ondra-instagram_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg?imwidth=450'
     })
     const boatRock = new Destination({
-        name: 'Boat Rock', 
+        name: 'Boat Rock',
         city: 'Atlanta',
         state: 'GA',
-        latitude: 33.72,
-        longitude: -84.562,
+        location: '33.72, -84.562',
         typeOfClimbing: 'Bouldering'.toUpperCase(),
         description: 'Small boulder field with sharp granite boulders nestled in a metro-Atlanta neighborhood'
     })
@@ -49,7 +45,7 @@ User.remove({}).then(() => {
         photo: 'https://cdn-files.apstatic.com/climb/108707832_medium_1494293772.jpg'
     })
     const yellowArete = new Climb({
-        name: 'Yellow Arete', 
+        name: 'Yellow Arete',
         type: 'Boulder',
         grade: 'V4',
         completed: true,
@@ -59,10 +55,7 @@ User.remove({}).then(() => {
     boatRock.climbs.push(wavesInMotion, yellowArete)
     const sandRock = new Destination({
         name: 'Sand Rock',
-        city: 'Steele',
-        state: 'AL',
-        latitude: '34.18',
-        longitude: '-85.817',
+        location: '34.18, -85.817',
         typeOfClimbing: 'Sport Climbing'.toUpperCase(),
         description: 'Accessible single-pitch sport climbing'
     })
@@ -76,16 +69,15 @@ User.remove({}).then(() => {
     })
     sandRock.climbs.push(misty)
     adamOndra.destinations.push(boatRock, sandRock)
-    return adamOndra.save()    
+    return adamOndra.save()
 }).then(() => {
     const lynnHill = new User({
         username: 'lynnster',
         email: 'lynn@gmail.com',
-        homeCity: 'Jasper',
-        homeState: 'GA',
-        sportClimbGrade: '5.14',
-        boulderGrade: 'V13',
-        photo: 'https://cdn-files.apstatic.com/climb/109451567_medium_1494350546.jpg'     
+        livesIn: 'Jasper, GA',
+        // sportClimbGrade: '5.14',
+        // boulderGrade: 'V13',
+        photo: 'https://cdn-files.apstatic.com/climb/109451567_medium_1494350546.jpg'
     })
     return lynnHill.save()
 

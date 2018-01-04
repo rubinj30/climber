@@ -14,7 +14,6 @@ const ClimbSchema = new Schema(
       type: String
     },
     grade: String,
-    funRating: String,
     completed: Boolean,
     gearNeeded: String,
     photo: String,
@@ -33,8 +32,7 @@ const DestinationSchema = new Schema(
     city: String,
     cragType: String,
     state: String,
-    latitude: String,
-    longitude: String,
+    location: String,
     typeOfClimbing: {
         type: String,
         // Danny suggested radio buttons
@@ -44,9 +42,7 @@ const DestinationSchema = new Schema(
     description: {
         type: String
     },
-    description: {
-        type: String
-    },
+    // direction: String,
     climbs: [ ClimbSchema ]
   },
   {
@@ -63,28 +59,25 @@ const UserSchema = new Schema(
       unique: [ true, 'Username must not already be in use']
     },
     email: String,
-    firstName: String,
-    lastName: String,
     age: Number,
     gender: String,
-    homeCity: String,
-    homeState: String,
+    livesIn: String,
     userCreated: {
         type: Date,
         default: Date.now
     },
-    sportClimbGrade: {
-      type: String,
-      default: 'N/A'
-    },
-    boulderGrade: {
-      type: String,
-      default: 'N/A'
-    },
-    tradGrade: {
-      type: String,
-      default: 'N/A'
-    },
+    // sportClimbGrade: {
+    //   type: String,
+    //   default: 'N/A'
+    // },
+    // boulderGrade: {
+    //   type: String,
+    //   default: 'N/A'
+    // },
+    // tradGrade: {
+    //   type: String,
+    //   default: 'N/A'
+    // },
     photo: {
       type: String,
       default: 'https://goo.gl/yYQiTT'
