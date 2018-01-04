@@ -73,7 +73,7 @@ const UserSchema = new Schema(
       type: String,
       default: 'https://goo.gl/yYQiTT'
     },
-    stores: [ DestinationSchema ]
+    destinations: [ DestinationSchema ]
   },
   {
     timestamps: {},
