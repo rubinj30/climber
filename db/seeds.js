@@ -22,7 +22,7 @@ User.remove({}).then(() => {
         email: 'adam@me.com',
         age: 25,
         gender: 'Male',
-        livesIn: 'Marietta, GA'
+        livesIn: 'Marietta, GA',
         likesToClimb: 'Sport'
 
         // sportClimbGrade: '5.15',
