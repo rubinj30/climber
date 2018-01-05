@@ -36,9 +36,9 @@ router.get('/new', (request, response) => {
 
 router.get('/:destinationId', (request, response) => {
     const destinationId = request.params.destinationId
-    console.log(`destination id ------ ${destinationId}`)
+    console.log(`destination id from GET ------ ${destinationId}`)
     const userId = request.params.userId
-    console.log(`user id ------ ${userId}`)
+    console.log(`user id from GET ------ ${userId}`)
     User.findById(userId)
         .then((user) => {
             console.log(user)
@@ -74,14 +74,17 @@ router.post('/', (request, response) => {
 
 router.get('/:destinationId/delete', (request, response) => {
     const userId = request.params.userId
+    console.log(`user id from Delete ------ ${userId}`)
     const destinationId = request.params.destinationId
+    console.log(`destination id from Delete ------ ${destinationId}`)
     User.findById(userId)
         .then((user) => {
+            console.log(user)
             const destination = user.destinations.id(destinationId)
             destination.remove()
             return user.save()
         }).then(() => {
-            response.redirect('/destinations')
+            response.redirect(`/users/${userId}/destinations`)
         }).catch((err) => {
             console.log(err)
         })
