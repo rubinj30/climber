@@ -1,13 +1,13 @@
 <div class="path">
     <a class='path-color' href="/users">Climbers</a> /
     <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> /
-    <a class='path-color' href="/users/{{user._id}}/destinations">Climbing Destinations</a> / 
+    <a class='path-color' href="/users/{{user._id}}/destinations">Climbing Destinations</a> /
     <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}/">{{destination.name}}</a> / Add Climb
 </div>
 
-{{!-- <h4>Add Climbing Destination</h4>
+<h4>Add Climb</h4>
 <div>
-    <form action="/users/{{user._id}}/destinations" method="POST">
+    <form action="/users/{{user._id}}/destinations/{{destination._id}}/" method="POST">
         <div>
             <div>
                 <label for="name">Name: </label>
@@ -16,34 +16,38 @@
 
 
             <div>
-                <label for="city">Nearest City or Town: </label>
-                <input type="text" name="city" required/>
+                <label for="type">Type of Climb (Ex: Boulder, Sport Climb, Trad Climb): </label>
+                <input type="text" name="type" required/>
             </div>
 
             <div>
-                <label for="state">State: </label>
+                <label for="grade">Difficulty Rating </label>
                 <input type="text" name="state" />
             </div>
-
             <div>
-                <label for="typeOfClimbing">What type of climbing (Sport, Bouldering, Trad, Ice, Alpine): </label>
-                <input type="text" name="typeOfClimbing" />
+                <label for="gearNeeded">What gear if any is needed to climb?</label>
+                <input type="text" name="gearNeeded">
             </div>
             <div>
-                <label for="description">Add a brief description of the area: </label>
+                <label for="completed">Successfully Climbed? </label>
+                <input type="text" name="completed" />
+            </div>
+            <div>
+                <label for="description">Provide some brief details about the climb that could help others find/climb it </label>
                 <input type="text" name="description" />
             </div>
 
             <div>
                 <label for="photo">Photo: </label>
-                <input type="text" name="photo" value='https://pbs.twimg.com/media/C_SSNwwXcAEAL4l.jpg' required />
+                <input type="text" name="photo" value='http://pmdvod.nationalgeographic.com/NG_Video_DEV/970/971/adv-beyond-the-edge-honnold_480x360.jpg'
+                    required />
             </div>
 
             <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Destination</button>
-            <button class="btn waves-effect waves-light button-colors">
-                <a href="/users/{{user._id}}/destinations/">Cancel</a>
-            </button>
 
         </div>
     </form>
-</div> --}}
+    <button class="btn waves-effect waves-light button-colors">
+        <a href="/users/{{user._id}}/destinations/{{destination._id}}">Cancel</a>
+    </button>
+</div>
