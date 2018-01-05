@@ -32,7 +32,7 @@ router.get('/new', (request, response) => {
         const destination = user.destinations.id(destinationId)
   
         response.render('climbs/new', {
-          userId,
+          user,
           destination,
           pageTitle: 'Add Climb'
         })
