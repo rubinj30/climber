@@ -2,7 +2,6 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #173e43;
   background-color: #dddfd4;
-
 }
 
 header {
@@ -10,7 +9,7 @@ header {
 }
 
 main {
-  padding: 75px;
+  padding: 0 75px;
 }
 
 .app-title {
@@ -23,11 +22,11 @@ main {
   max-width: 200px;
 }
 
-.bottom-of-page-button {
-  background-color: #333333;
+.button-color {
+  background-color: #fae596;
+  text-decoration: none;
 }
 
-.button-color {
-  background-color: #fae596
-  text-decoration: none;
+.button-text-color {
+  color: #173e43;
 }
