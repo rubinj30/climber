@@ -45,6 +45,21 @@ router.post('/',  (request, response) => {
       })
 })
 
+router.get('/:userId/edit', (request, response) => {
+  const userId = request.params.userId
+
+  User.findById(userId)
+    .then((user) => {
+      response.render('users/edit', {
+        user,
+        pageTitle: 'Climber Info Update'
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
 router.get('/:userId/delete', (request, response) => {
   const userId = request.params.userId
   console.log(User.findById(userId))

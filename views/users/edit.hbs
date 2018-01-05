@@ -1,0 +1,46 @@
+<div class="top-routes-view">
+    <a href="/users">Climbers</a> / Edit Profile
+</div>
+<div>
+    <h4>Edit Climber Info</h4>
+    <div>
+        <form action="/users" method="POST">
+
+                <div>
+                    <label for="username">Username: </label>
+                    <input type="text" name="username" value="{{user.username}}" required/>
+                </div>
+
+                <div>
+                    <div>
+                        <label for="email">Email: </label>
+                        <input type="text" name="email" value="{{user.email}}" required/>
+                    </div>
+
+                    <div>
+                        <label for="age">Age: </label>
+                        <input type="number" name="age" value="{{user.age}}" />
+                    </div>
+
+                    <div>
+                        <label for="gender">Gender: </label>
+                        <input type="text" name="gender" value="{{user.gender}}"/>
+                    </div>
+                    <div>
+                        <label for="likesToClimb">What Is Your Favorite Style of Climbing? </label>
+                        <input type="text" name="likesToClimb" value="{{user.likesToClimb}}"/>
+                    </div>
+
+                    <div>
+                        <label for="photo">Photo: </label>
+                        <input type="text" name="photo" value='https://goo.gl/yYQiTT' required />
+                    </div>
+
+                    <div class="submit-button-container">
+                        <input class="submit-button button-color" type="submit" value="Edit Climber">
+                        <a class='btn' href="/users">Cancel</a>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>

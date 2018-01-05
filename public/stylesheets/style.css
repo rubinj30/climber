@@ -1,11 +1,12 @@
 body {
-
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: #333333;
+  color: #173e43;
+  background-color: #dddfd4;
+
 }
 
 header {
-  background-color: #c9d8c5;
+  background-color: #3fb0ac;
 }
 
 main {
@@ -19,17 +20,14 @@ main {
 
 .index-photo {
   border-radius: 25px;
-}
-
-* { 
-  border: black 1px solid;
+  max-width: 200px;
 }
 
 .bottom-of-page-button {
   background-color: #333333;
 }
 
-.button-text {
-  color: white;
+.button-color {
+  background-color: #fae596
   text-decoration: none;
 }
