@@ -1,0 +1,27 @@
+<div class="path">
+    <a class='path-color' href="/users">Climbers</a> / 
+    <a class='path-color' href="/users/{{userId}}"> {{username}}</a> / {{pageTitle}}
+</div>
+<div>
+    {{#each destinations}}
+    <a class='path-color' href="/users/{{../userId}}/destinations/{{this._id}}">
+        <div class='index-photo-div'>
+            <img class='destination-photo index-photo' src="{{this.photo}}" alt='climber\' s photo '>
+        </div>
+        <div class='index-label-color '>
+            {{this.name}}
+        </div>
+    </a>    
+        <div class='index-label-color '>
+            {{this.city}} {{this.state}}
+        </div>
+    {{/each}}
+</div>
+
+<div>
+    <a class="button-colors" href="/users/{{user._id}}/destinations/new">
+        <button class="btn waves-effect waves-light button-colors">
+            Add Climbing Destination
+        </button>
+    </a>
+</div>

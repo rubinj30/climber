@@ -58,6 +58,8 @@ User.remove({}).then(() => {
     const sandRock = new Destination({
         name: 'Sand Rock',
         location: '34.18, -85.817',
+        city: 'Steele',
+        state: 'AL',
         typeOfClimbing: 'Sport Climbing'.toUpperCase(),
         description: 'Accessible single-pitch sport climbing'
     })

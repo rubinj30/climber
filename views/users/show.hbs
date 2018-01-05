@@ -12,10 +12,11 @@
 <div class='profile-photo-container'>
     <img src="{{user.photo}}" alt="Climber's Profile Photo">
 </div>
-
-<button class="btn waves-effect waves-light button-colors">
-    <a class="button-colors" href="/users/{{user._id}}/edit">Edit Climber Info</a>
-</button>
+<a class="button-colors" href="/users/{{user._id}}/edit">
+    <button class="btn waves-effect waves-light button-colors">
+        Edit Climber Info
+    </button>
+</a>
 
 <div>
     <a class='button-colors' href="/users/{{user._id}}/delete/">

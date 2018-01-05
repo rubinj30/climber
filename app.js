@@ -11,6 +11,9 @@ mongoose.connect(process.env.MONGODB_URI);
 
 const index = require('./routes/index');
 const users = require('./routes/users');
+const destinations = require('./routes/destinations')
+const climbs = require('./routes/climbs')
+
 
 const app = express();
 
@@ -31,6 +34,8 @@ app.use(methodOverride('_method'))
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/users/:userId/destinations', destinations)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

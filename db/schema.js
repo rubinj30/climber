@@ -30,7 +30,6 @@ const DestinationSchema = new Schema(
       required: [ true, 'Destination name is required' ]
     },
     city: String,
-    cragType: String,
     state: String,
     location: String,
     typeOfClimbing: {
@@ -38,11 +37,15 @@ const DestinationSchema = new Schema(
         // Danny suggested radio buttons
         enum: ['BOULDERING', 'TRAD CLIMBING', 'SPORT CLIMBING', 'ALPINE CLIMBING', 'ICE CLIMBING']
     },
-    indoorOrOutdoor: String,
+    // indoorOrOutdoor: String,
+    // direction: String,
     description: {
         type: String
     },
-    // direction: String,
+    photo: {
+      type: String,
+      default: 'https://pbs.twimg.com/media/C_SSNwwXcAEAL4l.jpg'
+    },
     climbs: [ ClimbSchema ]
   },
   {
