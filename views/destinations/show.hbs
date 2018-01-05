@@ -10,14 +10,16 @@
 
 <div>
     {{#each destination.climbs}}
-    <div><img src="{{this.photo}}" alt="photo of climbing route"></div>
+    <div>
+        <a href=""></a>
+        <img src="{{this.photo}}" alt="photo of climbing route"></div>
     <div>{{this.name}}</div>
     <div>{{this.grade}}</div>
     {{/each}}
 </div>
 
 <div>
-    <a class="button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}">
+    <a class="button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}/climbs/new">
         <button class="btn waves-effect waves-light button-colors">
             Add Climbing Destination
         </button>
