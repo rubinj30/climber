@@ -21,17 +21,17 @@ router.get('/', (request, response) => {
         })
 })
 
-// router.get('/new', (request, response) => {
-//     const userId = request.params.userId
-//     console.log(userId)
-//     User.findById(userId)
-//         .then((user) => {
-//             response.render('destinations/new', {
-//                 user,
-//                 pageTitle: "Add Climbing Destination"
-//         })
-//     })
-// })
+router.get('/new', (request, response) => {
+    const userId = request.params.userId
+    console.log(`USER ID ----- ${userId}`)
+    User.findById(userId)
+        .then((user) => {
+            response.render('destinations/new', {
+                user: user,
+                pageTitle: "Add Climbing Destination"
+        })
+    })
+})
 
 router.get('/:destinationId', (request, response) => {
     const destinationId = request.params.destinationId
@@ -41,9 +41,9 @@ router.get('/:destinationId', (request, response) => {
     User.findById(userId)
         .then((user) => {
             console.log(user)
-            const destination = user.destination.id(destinationId)
+            const destination = user.destinations.id(destinationId) /// how do i get destination into a variable
             response.render('destinations/show', {
-                userId,
+                user,
                 destination,
                 pageTitle: "Climbing Destination"
             })
