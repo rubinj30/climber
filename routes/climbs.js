@@ -26,7 +26,7 @@ const bodyParser = require('body-parser')
 router.get('/new', (request, response) => {
     const userId = request.params.userId
     const destinationId = request.params.destinationId
-  
+    console.log(`user id ------ ${userId}`)
     User.findById(userId)
       .then((user) => {
         const destination = user.destinations.id(destinationId)
@@ -39,4 +39,24 @@ router.get('/new', (request, response) => {
       })
   })
 
-  module.exports = router
+router.post('/', (request, response) => {
+    const userId = request.params.userId
+    console.log(`user id ------ ${userId}`)
+    const destinationId = request.params.destinationId
+    console.log(`destionation id ------ ${destinationId}`)
+    const newClimb = request.body
+    console.log(`new climb id ------ $`)
+    
+    User.findById(userId)
+        .then((user) => {
+            const destination = user.destinations.id(destinationId)
+            destination.climbs.push(newClimb)
+            return user.save()
+        }).then(() => {
+            response.redirect(`/users/${userId}/destinations/${destinationId}`)
+        }).catch((err) => {
+            console.log(err)
+        })
+})
+
+module.exports = router

@@ -6,8 +6,9 @@
 </div>
 
 <h4>Add Climb</h4>
+
 <div>
-    <form action="/users/{{user._id}}/destinations/{{destination._id}}/" method="POST">
+    <form action="/users/{{user._id}}/destinations/{{destination._id}}/climbs" method="POST">
         <div>
             <div>
                 <label for="name">Name: </label>
@@ -28,10 +29,12 @@
                 <label for="gearNeeded">What gear if any is needed to climb?</label>
                 <input type="text" name="gearNeeded">
             </div>
+
             <div>
                 <label for="completed">Successfully Climbed? </label>
                 <input type="text" name="completed" />
             </div>
+            
             <div>
                 <label for="description">Provide some brief details about the climb that could help others find/climb it </label>
                 <input type="text" name="description" />
@@ -43,7 +46,7 @@
                     required />
             </div>
 
-            <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Destination</button>
+            <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Climb</button>
 
         </div>
     </form>
