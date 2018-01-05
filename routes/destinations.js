@@ -27,7 +27,7 @@ router.get('/new', (request, response) => {
     User.findById(userId)
         .then((user) => {
             response.render('destinations/new', {
-                user: user,
+                user,
                 pageTitle: "Add Climbing Destination"
         })
     })

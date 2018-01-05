@@ -1,6 +1,48 @@
 <div class="path">
-    <a class='path-color' href="/users">Climbers</a> / 
-    <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> / 
+    <a class='path-color' href="/users">Climbers</a> /
+    <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> /
     <a class='path-color' href="/users/{{user._id}}/destinations">Climbing Destinations</a> / Add New
-    
+</div>
+
+<h4>Add Climbing Destination</h4>
+<div>
+    <form action="/users/{{user._id}}" method="POST">
+        <div>
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" name="name" required/>
+            </div>
+
+
+            <div>
+                <label for="city">Nearest City or Town: </label>
+                <input type="text" name="city" required/>
+            </div>
+
+            <div>
+                <label for="state">State: </label>
+                <input type="text" name="state" />
+            </div>
+
+            <div>
+                <label for="typeOfClimbing">What type of climbing (Sport, Bouldering, Trad, Ice, Alpine): </label>
+                <input type="text" name="typeOfClimbing" />
+            </div>
+            <div>
+                <label for="description">Add a brief description of the area: </label>
+                <input type="text" name="description" />
+            </div>
+
+            <div>
+                <label for="photo">Photo: </label>
+                <input type="text" name="photo" value='https://goo.gl/yYQiTT' required />
+            </div>
+
+            <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Destination</button>
+            <button class="btn waves-effect waves-light button-colors">
+                <a href="/users/{{user._id}}/destinations/">Cancel</a>
+            </button>
+
+        </div>
+    </form>
 </div>
