@@ -1,12 +1,12 @@
 <div class="path">
     <a class='path-color' href="/users">Climbers</a> /
     <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> /
-    <a class='path-color' href="/users/{{user._id}}/destinations">Climbing Destinations</a> / Add New
+    <a class='path-color' href="/users/{{user._id}}/destinations">Climbing Destinations</a> / Add Climbing Destination
 </div>
 
 <h4>Add Climbing Destination</h4>
 <div>
-    <form action="/users/{{user._id}}" method="POST">
+    <form action="/users/{{user._id}}/destinations" method="POST">
         <div>
             <div>
                 <label for="name">Name: </label>
@@ -35,7 +35,7 @@
 
             <div>
                 <label for="photo">Photo: </label>
-                <input type="text" name="photo" value='https://goo.gl/yYQiTT' required />
+                <input type="text" name="photo" value='https://pbs.twimg.com/media/C_SSNwwXcAEAL4l.jpg' required />
             </div>
 
             <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Destination</button>
