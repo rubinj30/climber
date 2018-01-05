@@ -1,6 +1,17 @@
 <div class="path">
-    <a class='path-color' href="/users">Climbers</a> / 
-    <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> / 
+    <a class='path-color' href="/users">Climbers</a> /
+    <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> /
     <a class='path-color' href="/users/{{user._id}}/destinations">Destinations</a> /
     <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}"> {{destination.name}}</a>
+</div>
+
+<h4>{{destination.name}}</h4>
+{{destination.description}}
+
+<div>
+    {{#each destination.climbs}}
+    <div><img src="{{this.photo}}" alt="photo of climbing route"></div>
+    <div>{{this.name}}</div>
+    <div>{{this.grade}}</div>
+    {{/each}}
 </div>
