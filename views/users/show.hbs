@@ -1,5 +1,5 @@
-<div class="top-routes-view">
-  <a href="/users">Home</a> / {{user.username}}'s User Page
+<div class="path">
+    <a lass='path-color' href="/users">Home</a> / {{user.username}}
 </div>
 
 <div class='climber-info-container'>
@@ -14,5 +14,13 @@
 </div>
 
 <button class="btn waves-effect waves-light button-colors">
-    <a href="/users/{{user._id}}/delete/">Delete {{user.firstName}}'s user profile</a>
+    <a class="button-colors" href="/users/{{user._id}}/edit">Edit Climber Info</a>
 </button>
+
+<div>
+    <a class='button-colors' href="/users/{{user._id}}/delete/">
+        <button class="btn waves-effect waves-light button-colors">
+            Delete Climber profile
+        </button>
+    </a>
+</div>
