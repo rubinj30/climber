@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router({mergeParams: true});
+const express = require('express')
+const router = express.Router()
 const User = require('../db/models/User')
 const bodyParser = require('body-parser')
 
@@ -32,7 +32,7 @@ router.get('/:userId', (request, response) => {
         user
       })
     })
-  })
+})
 
 router.post('/',  (request, response) => {
   const newUserInfo = request.body
@@ -47,12 +47,12 @@ router.post('/',  (request, response) => {
 
 router.get('/:userId/edit', (request, response) => {
   const userId = request.params.userId
-
+console.log(userId)
   User.findById(userId)
     .then((user) => {
       response.render('users/edit', {
         user,
-        pageTitle: 'Climber Info Update'
+        pageTitle: 'Profile_Update'
       })
     })
     .catch((error) => {
@@ -60,9 +60,20 @@ router.get('/:userId/edit', (request, response) => {
     })
 })
 
+router.put('/:userId', (request, response) => {
+  console.log("testing?")
+  const userId = request.params.userId
+  const updatedUserInfo = request.body
+
+  User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
+    .then(() => {
+      response.redirect(`/users/${userId}`)
+    })
+})
+
+
 router.get('/:userId/delete', (request, response) => {
   const userId = request.params.userId
-  console.log(User.findById(userId))
   User.findByIdAndRemove(userId)
       .then(() => {
           response.redirect('/users')
