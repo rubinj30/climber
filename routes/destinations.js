@@ -21,6 +21,36 @@ router.get('/', (request, response) => {
         })
 })
 
+// router.get('/new', (request, response) => {
+//     const userId = request.params.userId
+//     console.log(userId)
+//     User.findById(userId)
+//         .then((user) => {
+//             response.render('destinations/new', {
+//                 user,
+//                 pageTitle: "Add Climbing Destination"
+//         })
+//     })
+// })
 
+router.get('/:destinationId', (request, response) => {
+    const destinationId = request.params.destinationId
+    console.log(`destination id ------ ${destinationId}`)
+    const userId = request.params.userId
+    console.log(`user id ------ ${userId}`)
+    User.findById(userId)
+        .then((user) => {
+            console.log(user)
+            const destination = user.destination.id(destinationId)
+            response.render('destinations/show', {
+                userId,
+                destination,
+                pageTitle: "Climbing Destination"
+            })
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+})
 
 module.exports = router
