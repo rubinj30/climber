@@ -6,43 +6,42 @@
     <div>
         <form action="/users" method="POST">
 
+            <div>
+                <label for="username">Username: </label>
+                <input type="text" name="username" required/>
+            </div>
+
+            <div>
                 <div>
-                    <label for="username">Username: </label>
-                    <input type="text" name="username" required/>
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" required/>
                 </div>
 
                 <div>
-                    <div>
-                        <label for="email">Email: </label>
-                        <input type="text" name="email" required/>
-                    </div>
-
-                    <div>
-                        <label for="age">Age: </label>
-                        <input type="number" name="age" />
-                    </div>
-
-                    <div>
-                        <label for="gender">Gender: </label>
-                        <input type="text" name="gender" />
-                    </div>
-                    <div>
-                        <label for="likesToClimb">What Is Your Favorite Style of Climbing? </label>
-                        <input type="text" name="likesToClimb" />
-                    </div>
-
-                    <div>
-                        <label for="photo">Photo: </label>
-                        <input type="text" name="photo" value='https://goo.gl/yYQiTT' required />
-                    </div>
-
-                    <div class="submit-button-container">
-                        <input class="submit-button button-color" type="submit" value="Add Climber">
-                        <div>
-                            <a href="/users">Cancel</a>
-                        </div>
-                    </div>
+                    <label for="age">Age: </label>
+                    <input type="number" name="age" />
                 </div>
+
+                <div>
+                    <label for="gender">Gender: </label>
+                    <input type="text" name="gender" />
+                </div>
+                <div>
+                    <label for="likesToClimb">What Is Your Favorite Style of Climbing? </label>
+                    <input type="text" name="likesToClimb" />
+                </div>
+
+                <div>
+                    <label for="photo">Photo: </label>
+                    <input type="text" name="photo" value='https://goo.gl/yYQiTT' required />
+                </div>
+
+                <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Submit</button>
+                <button class="btn waves-effect waves-light button-colors">
+                    <a href="/users">Cancel</a>
+                </button>
+
+            </div>
         </form>
     </div>
 </div>

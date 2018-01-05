@@ -6,43 +6,43 @@
     <div>
         <form action="/users" method="POST">
 
+            <div>
+                <label for="username">Username: </label>
+                <input type="text" name="username" value="{{user.username}}" required/>
+            </div>
+
+            <div>
                 <div>
-                    <label for="username">Username: </label>
-                    <input type="text" name="username" value="{{user.username}}" required/>
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" value="{{user.email}}" required/>
                 </div>
 
                 <div>
-                    <div>
-                        <label for="email">Email: </label>
-                        <input type="text" name="email" value="{{user.email}}" required/>
-                    </div>
-
-                    <div>
-                        <label for="age">Age: </label>
-                        <input type="number" name="age" value="{{user.age}}" />
-                    </div>
-
-                    <div>
-                        <label for="gender">Gender: </label>
-                        <input type="text" name="gender" value="{{user.gender}}"/>
-                    </div>
-                    <div>
-                        <label for="likesToClimb">What Is Your Favorite Style of Climbing? </label>
-                        <input type="text" name="likesToClimb" value="{{user.likesToClimb}}"/>
-                    </div>
-
-                    <div>
-                        <label for="photo">Photo: </label>
-                        <input type="text" name="photo" value='https://goo.gl/yYQiTT' required />
-                    </div>
-
-                    <div>
-                        <input class="button-color" type="submit" value="Edit Climber">
-                        <div class='btn button-color'>
-                            <a class='btn' href="/users">Cancel</a>
-                        </div>
-                    </div>
+                    <label for="age">Age: </label>
+                    <input type="number" name="age" value="{{user.age}}" />
                 </div>
+
+                <div>
+                    <label for="gender">Gender: </label>
+                    <input type="text" name="gender" value="{{user.gender}}" />
+                </div>
+                <div>
+                    <label for="likesToClimb">What Is Your Favorite Style of Climbing? </label>
+                    <input type="text" name="likesToClimb" value="{{user.likesToClimb}}" />
+                </div>
+
+                <div>
+                    <label for="photo">Photo: </label>
+                    <input type="text" name="photo" value='https://goo.gl/yYQiTT' required />
+                </div>
+
+                <div>
+                    <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Submit</button>
+                    <button class="btn waves-effect waves-light button-colors">
+                        <a href="/users">Cancel</a>
+                    </button>
+                </div>
+            </div>
         </form>
     </div>
 </div>

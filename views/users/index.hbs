@@ -1,11 +1,11 @@
 <div class="top-routes-view">
-  <a href="/users">Climbers</a>
+    <a href="/users">Climbers</a>
 </div>
 <div>
     {{#each users}}
     <a href="/users/{{this._id}}">
         <div class='index-photo-div'>
-            <img class='climber-photo index-photo' src="{{this.photo}}" alt='climber\'s photo'>
+            <img class='climber-photo index-photo' src="{{this.photo}}" alt='climber\' s photo '>
         </div>
         <div>
             {{this.username}}
@@ -16,6 +16,7 @@
         </div>
     {{/each}}
 </div>
-<div class='btn button-color'>
-    <a class='button-text-color button-color' href="/users/new">Add New Climber</a>
-</div>
+
+<button class="btn waves-effect waves-light button-colors">
+    <a href="/users">Cancel</a>
+</button>
