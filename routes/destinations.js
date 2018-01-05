@@ -72,4 +72,19 @@ router.post('/', (request, response) => {
   
 })
 
+router.get('/:destinationId/delete', (request, response) => {
+    const userId = request.params.userId
+    const destinationId = request.params.destinationId
+    User.findById(userId)
+        .then((user) => {
+            const destination = user.destinations.id(destinationId)
+            destination.remove()
+            return user.save()
+        }).then(() => {
+            response.redirect('/destinations')
+        }).catch((err) => {
+            console.log(err)
+        })
+})
+
 module.exports = router
