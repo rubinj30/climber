@@ -6,7 +6,11 @@ body {
 
 header {
   background-color: #3fb0ac;
+}
+
+.header-text {
   color: #dddfd4;
+  
 }
 
 main {
