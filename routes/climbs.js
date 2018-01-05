@@ -15,7 +15,7 @@ const bodyParser = require('body-parser')
 //                 userId: user._id,
 //                 username: user.username,
 //                 destinations: user.destinations,
-//                 pageTitle: "Climb"
+//                 pageTitle: "Climbs"
 //             })
 //         })
 //         .catch((err) => {
@@ -39,6 +39,24 @@ router.get('/new', (request, response) => {
       })
   })
 
+router.get('/:climbId', (request, response) => {
+    const userId = request.params.userId
+    const destinationId = request.params.destinationId
+    const climbId = request.params.climbId
+    User.findById(userId)
+        .then((user) => {
+            const destination = user.destinations.id(destinationId)
+            const climb = destination.id(climbId)
+            console.log(`climb ---- ${climb}`)
+            response.render('climbs/show', {
+                user,
+                destination,
+                climb
+            })
+        })
+})
+
+
 router.post('/', (request, response) => {
     const userId = request.params.userId
     console.log(`user id ------ ${userId}`)
@@ -58,5 +76,10 @@ router.post('/', (request, response) => {
             console.log(err)
         })
 })
+
+// router.get('/:climbId/delete', (request, response) => {
+//     const userId = request.params.userId
+//     const destinationId = request.params.destinationId
+// })
 
 module.exports = router
