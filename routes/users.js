@@ -18,7 +18,7 @@ router.get('/', (request, response) => {
 })
 
 router.get('/new', (request, response) => {
-  response.render('users/new', { pageTitle: 'New User' })
+  response.render('users/new', { pageTitle: 'New Climber' })
 })
 
 router.get('/:userId', (request, response) => {

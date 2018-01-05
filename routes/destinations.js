@@ -33,6 +33,7 @@ router.get('/new', (request, response) => {
     })
 })
 
+
 router.get('/:destinationId', (request, response) => {
     const destinationId = request.params.destinationId
     console.log(`destination id ------ ${destinationId}`)
@@ -51,6 +52,24 @@ router.get('/:destinationId', (request, response) => {
         .catch((err) => {
             console.log(err)
         })
+})
+
+router.post('/', (request, response) => {
+    const userId = request.params.userId
+    const newDestination = request.body
+  
+    User.findById(userId)
+      .then((user) => {
+        user.destinations.push(newDestination)
+        return user.save()
+      })
+      .then(() => {
+        response.redirect(`/users/${userId}/destinations`)
+      })
+      .catch((error) => {
+        console.log(error)
+   })
+  
 })
 
 module.exports = router
