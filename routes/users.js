@@ -52,7 +52,7 @@ console.log(userId)
     .then((user) => {
       response.render('users/edit', {
         user,
-        pageTitle: 'Profile_Update'
+        pageTitle: 'Update Info'
       })
     })
     .catch((error) => {
