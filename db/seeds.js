@@ -63,7 +63,8 @@ User.remove({}).then(() => {
         city: 'Steele',
         state: 'AL',
         typeOfClimbing: 'Sport Climbing',
-        description: 'Accessible single-pitch sport climbing'
+        description: 'Accessible single-pitch sport climbing',
+        photo: 'https://i.pinimg.com/originals/b4/35/d8/b435d8d6b70c19848d7ac73e2546049a.jpg'
     })
     const misty = new Climb({
         name: 'Misty',

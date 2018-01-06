@@ -42,18 +42,20 @@ main {
 
 .index-photo {
   max-width: 200px;
+  max-height: 200px;
   border: 4px;
   padding-bottom: 5px;
 }
 
 .profile-photo {
   max-width: 400px;
+  max-height: 400px;
 }
 
 .index-profile-card {
   max-width: 220px;
   padding: 10px;
-  margin: 25px;
+  margin: 25px 0px;
   background-color: white;
 }
 
@@ -73,4 +75,22 @@ main {
 
 .buttons-after-form {
   padding-top: 30px;
+}
+
+.top-buttons {
+  display: flex;
+  padding: 0 5px 20px 0;
+}
+
+.top-button {
+  padding-right: 10px;
+}
+
+.bottom-buttons {
+  display: flex;
+  padding: 0 5px 20px 0;
+}
+
+.warning:hover {
+  background: red;
 }

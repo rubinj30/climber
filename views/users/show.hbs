@@ -1,38 +1,44 @@
 <div class="path">
     <a class='path-color' href="/users">Home</a> / {{user.username}}
+
 </div>
+
+<div class='top-buttons'>
+    <div class='top-button'>
+        <a class="button-colors" href="/users/{{user._id}}/destinations">
+            <button class="btn waves-effect waves-light button-colors">
+                View Destinations
+            </button>
+        </a>
+    </div>
+    <div class='top-button'>
+        <a class="button-colors" href="/users/{{user._id}}/edit">
+            <button class="btn waves-effect waves-light button-colors">
+                Edit Info
+            </button>
+        </a>
+    </div>
+
+    <div class='top-button'>
+        <a class='button-colors' href="/users/{{user._id}}/delete/">
+            <button class="btn waves-effect waves-light button-colors warning">
+                Delete Climber
+            </button>
+        </a>
+    </div>
+</div>
+
 
 <div class='climber-info-container'>
     <div>{{user.username}}</div>
-    <div>E-mail:  {{user.email}}</div>
-    <div>Age:  {{user.age}}</div>
-    <div>Lives in:  {{user.livesIn}}</div>
-    <div>Favorite type of climbing:  {{user.likesToClimb}}</div>
-    <div>Skill level:  {{user.skillLevel}}</div>
+    <div>E-mail: {{user.email}}</div>
+    <div>Age: {{user.age}}</div>
+    <div>Lives in: {{user.livesIn}}</div>
+    <div>Favorite type of climbing: {{user.likesToClimb}}</div>
+    <div>Skill level: {{user.skillLevel}}</div>
+    <div>Climbing partner status: {{user.climbingPartnerStatus}}</div>
 </div>
 <div class='profile-photo-container'>
     <img class="profile-photo card-shadow" src="{{user.photo}}" alt="Climber's Profile Photo">
 </div>
 
-<div>
-    <a class="button-colors" href="/users/{{user._id}}/destinations">
-        <button class="btn waves-effect waves-light button-colors">
-            View Destinations
-        </button>
-    </a>
-</div>
-<div>
-    <a class="button-colors" href="/users/{{user._id}}/edit">
-        <button class="btn waves-effect waves-light button-colors">
-            Edit Info
-        </button>
-    </a>
-</div>
-
-<div>
-    <a class='button-colors' href="/users/{{user._id}}/delete/">
-        <button class="btn waves-effect waves-light button-colors">
-            Delete Climber
-        </button>
-    </a>
-</div>
