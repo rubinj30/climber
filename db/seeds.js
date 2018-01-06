@@ -24,6 +24,7 @@ User.remove({}).then(() => {
         gender: 'Male',
         livesIn: 'Marietta, GA',
         likesToClimb: 'Sport',
+        skillLevel: 'Beginner',
 
         // sportClimbGrade: '5.15',
         // tradGrad: '5.14',
@@ -82,6 +83,7 @@ User.remove({}).then(() => {
         gender: 'Female',
         livesIn: 'Jasper, GA',
         likesToClimb: 'Traditional',
+        skillLevel: 'Advanced',
         // sportClimbGrade: '5.14',
         // boulderGrade: 'V13',
         photo: 'https://i.imgur.com/BveJhPw.jpg'

@@ -69,6 +69,7 @@ const UserSchema = new Schema(
         default: Date.now
     },
     likesToClimb: String,
+    skillLevel: String,
     // sportClimbGrade: {
     //   type: String,
     //   default: 'N/A'
