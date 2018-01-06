@@ -86,6 +86,42 @@ User.remove({}).then(() => {
         // boulderGrade: 'V13',
         // photo: 'https://cdn-files.apstatic.com/climb/109451567_medium_1494350546.jpg'
     })
+    const redRiver = new Destination({
+        name: 'Red River Gorge',
+        city: 'Stanton',
+        state: 'KY',
+        location: '37.784, -83.682',
+        type: 'Traditional and Sport Climbing',
+        description: 'One of the best climbing destinations in the country with endless amounts of Traditional and Sport climbing routes'
+    })
+    const amarillo = new Climb({
+        name: 'amarillo',
+        type: 'Sport Climbing',
+        grade: '5.11b',
+        completed: true,
+        gearNeeded: '8 quickdraws and anchors',
+        photo: 'https://cdn-files.apstatic.com/climb/107404089_medium_1494186810.jpg'
+    })
+    redRiver.climbs.push(amarillo)
+
+    const leda = new Destination({
+        name: 'Leda',
+        city: 'Chattanooga',
+        state: 'TN',
+        location: '35.236, -85.227',
+        type: 'Traditional and Sport Climbing',
+        description: 'Roadside crag along the winding roads of Chattanooga. It is mostly Sport climbing with some Traditional mixed in.'
+    })
+    const speedwayBoogie = new Climb({
+        name: 'Speedway Boogie',
+        type: 'Sport Climbing',
+        grade: '5.10b',
+        completed: false,
+        gearNeeded: '6 quickdraws and anchors',
+        photo: 'https://cdn-files.apstatic.com/climb/108776037_large_1494295828.jpg'
+    })
+    leda.climbs.push(speedwayBoogie)
+    lynnHill.destinations.push(redRiver, leda)
     return lynnHill.save()
 
 }).catch((err) => {
