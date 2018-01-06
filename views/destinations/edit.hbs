@@ -1,0 +1,48 @@
+<div class="path">
+    <a class='path-color' href="/users">Climbers</a> /
+    <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> /
+    <a class='path-color' href="/users/{{user._id}}/destinations">Destinations</a> /
+    <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}"> {{destination.name}}</a> /
+    <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}/edit"> Edit Destination </a>
+</div>
+<div>
+    <div class='form-div'>
+        <form action="/users/{{user._id}}/destinations/{{destination._id}}?_method=PUT" method="POST">
+            <div>
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" value="{{destination.name}}" required/>
+                </div>
+
+                <div>
+                    <div>
+                        <label for="state">State: </label>
+                        <input type="text" name="state" />
+                    </div>
+                    <div>
+                        <label for="photo">Link to picture of the new area: </label>
+                        <input type="text" name="photo" value='{{destination.photo}}' required />
+                    </div>
+                    <div>
+                        <label for="description">Add a brief description of the area: </label>
+
+                        <div class="input-field">
+                            <input type="text" name="description" value="{{destination.description}}" />
+                        </div>
+                    </div>
+                    <div>
+
+                        <div class='bottom-buttons'>
+                            <div class='bottom-button'>
+                                <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Submit</button>
+                            </div>
+                            <div class='bottom-button'>
+                                <a class="btn waves-effect waves-light button-colors" href="/users/{{user._id}}/destinations">
+                                    Cancel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        </form>
+        </div>
+        </div>

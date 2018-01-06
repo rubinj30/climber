@@ -72,6 +72,47 @@ router.post('/', (request, response) => {
   
 })
 
+router.get('/:destinationId/edit', (request, response) => {
+    const userId = request.params.userId
+    const destinationId = request.params.destinationId
+    console.log(userId)
+    User.findById(userId)
+        .then((user) => {
+            const destination = user.destinations.id(destinationId)
+            response.render('destinations/edit', {
+                user,
+                destination,
+                pageTitle: 'Update Destination Info'
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+      })
+  })
+
+router.put('/:destinationId', (request, response) => {
+    const userId = request.params.userId
+    const destinationId = request.params.destinationId
+    const updatedDestinationInfo = request.body
+    User.findById(userId)
+        .then((user) => {
+            const destination = user.destinations.id(destinationId)
+            destination.name =  updatedDestinationInfo.name
+            destination.city =  updatedDestinationInfo.city
+            destination.state =  updatedDestinationInfo.state
+            // destination.indoorOrOutdoor =  updatedDestinationInfo.indoorOrOutdoor
+            destination.description = updatedDestinationInfo.description
+            destination.photo = updatedDestinationInfo.photo
+            return user.save()         
+            console.log(user)
+    }).then(() => {
+        response.redirect(`/users/${userId}/destinations/${destinationId}`)
+    }).catch((err) => {
+        console.log(err)
+    })
+    
+})
+
 router.get('/:destinationId/delete', (request, response) => {
     const userId = request.params.userId
     console.log(`user id from Delete ------ ${userId}`)

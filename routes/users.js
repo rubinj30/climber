@@ -47,12 +47,11 @@ router.post('/',  (request, response) => {
 
 router.get('/:userId/edit', (request, response) => {
   const userId = request.params.userId
-console.log(userId)
   User.findById(userId)
     .then((user) => {
       response.render('users/edit', {
         user,
-        pageTitle: 'Profile_Update'
+        pageTitle: 'Update Profile'
       })
     })
     .catch((error) => {
