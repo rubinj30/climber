@@ -52,7 +52,7 @@ console.log(userId)
     .then((user) => {
       response.render('users/edit', {
         user,
-        pageTitle: 'Update Info'
+        pageTitle: 'Profile_Update'
       })
     })
     .catch((error) => {
@@ -61,7 +61,6 @@ console.log(userId)
 })
 
 router.put('/:userId', (request, response) => {
-  console.log("testing?")
   const userId = request.params.userId
   const updatedUserInfo = request.body
 

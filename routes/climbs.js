@@ -42,11 +42,13 @@ router.get('/new', (request, response) => {
 router.get('/:climbId', (request, response) => {
     const userId = request.params.userId
     const destinationId = request.params.destinationId
+    console.log(`destination id from GET ------ ${destinationId}`)
     const climbId = request.params.climbId
+    console.log(`climb ID ----- ${climbId}`)
     User.findById(userId)
         .then((user) => {
             const destination = user.destinations.id(destinationId)
-            const climb = destination.id(climbId)
+            const climb = destination.climbs.id(climbId)
             console.log(`climb ---- ${climb}`)
             response.render('climbs/show', {
                 user,
@@ -55,7 +57,6 @@ router.get('/:climbId', (request, response) => {
             })
         })
 })
-
 
 router.post('/', (request, response) => {
     const userId = request.params.userId
@@ -77,9 +78,9 @@ router.post('/', (request, response) => {
         })
 })
 
-// router.get('/:climbId/delete', (request, response) => {
-//     const userId = request.params.userId
-//     const destinationId = request.params.destinationId
-// })
+router.get('/:climbId/delete', (request, response) => {
+    const userId = request.params.userId
+    const destinationId = request.params.destinationId
+})
 
 module.exports = router
