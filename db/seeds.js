@@ -28,7 +28,7 @@ User.remove({}).then(() => {
         // sportClimbGrade: '5.15',
         // tradGrad: '5.14',
         // boulderGrade: 'V16',
-    photo: 'http://www.montura.it/file_public/persone_persona_photogallery/121/image/3.jpg'
+    photo: 'https://i.imgur.com/NbV0SnR.jpg'
     })
     const boatRock = new Destination({
         name: 'Boat Rock',

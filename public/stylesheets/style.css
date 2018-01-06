@@ -31,10 +31,26 @@ main {
 .path-color {
     color: #173e43;
 }
+
+.img-border-radius {
+  border-radius: 15px;
+  -webkit-box-shadow: 6px 6px 6px -6px #777;
+  -moz-box-shadow: 6px 6px 6px -6px #777;
+       box-shadow: 6px 6px 6px -6px #777;
+}
+
+
 .index-photo {
-  border-radius: 20px;
   max-width: 200px;
   border: 4px;
+}
+
+.profile-photo {
+  max-width: 400px;
+}
+
+.index-profile-card {
+  
 }
 
 .button-colors {
