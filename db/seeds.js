@@ -38,7 +38,8 @@ User.remove({}).then(() => {
         state: 'GA',
         location: '33.72, -84.562',
         typeOfClimbing: 'Bouldering',
-        description: 'Small boulder field with sharp granite boulders nestled in a metro-Atlanta neighborhood'
+        description: 'Small boulder field with sharp granite boulders nestled in a metro-Atlanta neighborhood',
+        photo: 'https://cdn-files.apstatic.com/climb/106081440_medium_1494076517.jpg'
     })
     const wavesInMotion = new Climb({
         name: 'Waves in Motion',
@@ -46,7 +47,7 @@ User.remove({}).then(() => {
         grade: 'V3',
         completed: false,
         gearNeeded: 'Crash pad',
-        photo: 'https://cdn-files.apstatic.com/climb/108707832_medium_1494293772.jpg'
+        photo: 'http://gripped.com/wp-content/uploads/2015/04/jo.jpg'
     })
     const yellowArete = new Climb({
         name: 'Keeper of the Boat',
@@ -54,7 +55,7 @@ User.remove({}).then(() => {
         grade: 'V4',
         completed: true,
         gearNeeded: 'Crashpad',
-        photo: 'https://cdn-files.apstatic.com/climb/108707832_medium_1494293772.jpg'
+        photo: 'https://i.imgur.com/RrZOBgb.jpg'
     })
     boatRock.climbs.push(wavesInMotion, yellowArete)
     const sandRock = new Destination({

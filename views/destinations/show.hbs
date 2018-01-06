@@ -2,8 +2,7 @@
     <a class='path-color' href="/users">Climbers</a> /
     <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> /
     <a class='path-color' href="/users/{{user._id}}/destinations">Destinations</a> /
-    <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}"> {{destination.name}}</a> /
-        <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}/edit"> {{destination.name}} </a> 
+    <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}"> {{destination.name}}</a>
 </div>
 
 <h4>{{destination.name}}</h4>
@@ -11,13 +10,15 @@
 
 <div>
     {{#each destination.climbs}}
-    <div>
-        <a href=""></a>
-        <img class="profile-photo img-border-radius" src="{{this.photo}}" alt="photo of climbing route">
+    <div class='index-profile-card card-shadow'>
+        <div>
+            <a href=""></a>
+            <img class="index-photo img-border-radius" src="{{this.photo}}" alt="photo of climbing route">
+        </div>
+        <div>{{this.name}}</div>
+        <div>{{this.grade}}</div>
+        <div>{{this._id}}</div>
     </div>
-    <div>{{this.name}}</div>
-    <div>{{this.grade}}</div>
-    <div>{{this._id}}</div>
     {{/each}}
 </div>
 
@@ -39,7 +40,7 @@
 
     <div class='bottom-button'>
         <a class="button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}/delete">
-            <button class="btn waves-effect waves-light button-colors">
+            <button class="btn waves-effect waves-light button-colors warning">
                 Remove Destination
             </button>
         </a>
