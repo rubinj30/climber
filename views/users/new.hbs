@@ -2,7 +2,7 @@
     <a class='path-color' href="/users">Climbers</a> / New Climber
 </div>
 <div>
-    <div>
+    <div class="form-div">
         <form action="/users" method="POST">
 
             <div>
@@ -24,7 +24,7 @@
                 <label for="gender">Gender: </label>
                 <input type="text" name="gender" />
             </div>
-                        <div>
+            <div>
                 <label for="photo">Link to Profile Pic (best to make it a square one): </label>
                 <input type="text" name="photo" value='https://goo.gl/yYQiTT' required />
             </div>
@@ -39,8 +39,8 @@
                 <input type="radio" id="favoriteStyle3" name="likesToClimb" value="Bouldering">
                 <label for="favoriteStyle3">Bouldering</label>
 
-                <input type="radio" id="favoriteStyle3" name="likesToClimb" value="Any and Everything">
-                <label for="favoriteStyle3">Any and Everything</label>
+                <input type="radio" id="favoriteStyle3" name="likesToClimb" value="All of It">
+                <label for="favoriteStyle3">All of It</label>
             </div>
             <div>
                 <p>What would you consider your skill level? </p>
@@ -53,10 +53,11 @@
                 <input type="radio" id="skillLevel3" name="skillLevel" value="Advanced">
                 <label for="skillLevel3">Advanced</label>
             </div>
-
-            <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Climber</button>
-            <button class="btn waves-effect waves-light button-colors">
-                <a href="/users">Cancel</a>
+            <div class='buttons-after-form'>
+                <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Climber</button>
+                <button class="btn waves-effect waves-light button-colors">
+                    <a href="/users">Cancel</a>
+            </div>
             </button>
         </form>
     </div>
