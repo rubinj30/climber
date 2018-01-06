@@ -4,8 +4,7 @@
     <a class='path-color' href="/users/{{user._id}}/destinations">Climbing Destinations</a> / Add Climbing Destination
 </div>
 
-<h4>Add Climbing Destination</h4>
-<div>
+<div class='form-div'>
     <form action="/users/{{user._id}}/destinations" method="POST">
         <div>
             <div>
@@ -24,18 +23,18 @@
                 <input type="text" name="state" />
             </div>
 
+            {{!--
             <div>
                 <label for="typeOfClimbing">What type of climbing (Sport, Bouldering, Trad, Ice, Alpine): </label>
                 <input type="text" name="typeOfClimbing" />
+            </div> --}}
+            <div>
+                <label for="photo">Link to picture of the new area: </label>
+                <input type="text" name="photo" value='https://pbs.twimg.com/media/C_SSNwwXcAEAL4l.jpg' required />
             </div>
             <div>
                 <label for="description">Add a brief description of the area: </label>
                 <input type="text" name="description" />
-            </div>
-
-            <div>
-                <label for="photo">Photo: </label>
-                <input type="text" name="photo" value='https://pbs.twimg.com/media/C_SSNwwXcAEAL4l.jpg' required />
             </div>
 
             <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Destination</button>

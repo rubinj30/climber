@@ -19,14 +19,13 @@
                 <label for="age">Age: </label>
                 <input type="number" name="age" />
             </div>
-
-            <div>
-                <label for="gender">Gender: </label>
-                <input type="text" name="gender" />
-            </div>
             <div>
                 <label for="photo">Link to Profile Pic (best to make it a square one): </label>
                 <input type="text" name="photo" value='https://goo.gl/yYQiTT' required />
+            </div>
+            <div>
+                <label for="gender">Gender: </label>
+                <input type="text" name="gender" />
             </div>
             <div>
                 <p>What is your favorite style of climbing? </p>
@@ -39,8 +38,8 @@
                 <input type="radio" id="favoriteStyle3" name="likesToClimb" value="Bouldering">
                 <label for="favoriteStyle3">Bouldering</label>
 
-                <input type="radio" id="favoriteStyle3" name="likesToClimb" value="All of It">
-                <label for="favoriteStyle3">All of It</label>
+                <input type="radio" id="favoriteStyle4" name="likesToClimb" value="All of It">
+                <label for="favoriteStyle4">All of It</label>
             </div>
             <div>
                 <p>What would you consider your skill level? </p>
@@ -52,6 +51,17 @@
 
                 <input type="radio" id="skillLevel3" name="skillLevel" value="Advanced">
                 <label for="skillLevel3">Advanced</label>
+            </div>
+            <div>
+                <p>Climbing Partner Status: </p>
+                <input type="radio" id="climbingPartnerStatus1" name="climbingPartnerStatus" value="Need climbing partner(s)">
+                <label for="climbingPartnerStatus1">Need climbing partner(s)</label>
+
+                <input type="radio" id="climbingPartnerStatus2" name="climbingPartnerStatus" value="Already in committed climbing partnership">
+                <label for="climbingPartnerStatus2">Already in committed climbing partnership</label>
+
+                <input type="radio" id="climbingPartnerStatus3" name="climbingPartnerStatus" value="In open climbing partnership">
+                <label for="climbingPartnerStatus3">In open climbing partnership</label>
             </div>
             <div class='buttons-after-form'>
                 <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Climber</button>

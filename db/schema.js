@@ -37,8 +37,8 @@ const DestinationSchema = new Schema(
         // Danny suggested radio buttons
         // enum: ['BOULDERING', 'TRAD CLIMBING', 'SPORT CLIMBING', 'ALPINE CLIMBING', 'ICE CLIMBING']
     },
-    // indoorOrOutdoor: String,
-    // direction: String,
+    indoorOrOutdoor: String,
+    // directions: String,
     description: {
         type: String
     },
@@ -70,6 +70,7 @@ const UserSchema = new Schema(
     },
     likesToClimb: String,
     skillLevel: String,
+    climbingPartnerStatus: String,
     // sportClimbGrade: {
     //   type: String,
     //   default: 'N/A'
