@@ -32,7 +32,7 @@ main {
     color: #173e43;
 }
 
-.img-border-radius {
+.prof-border-radius {
   border-radius: 15px;
   -webkit-box-shadow: 6px 6px 6px -6px #777;
   -moz-box-shadow: 6px 6px 6px -6px #777;
@@ -50,7 +50,10 @@ main {
 }
 
 .index-profile-card {
-  
+  border: 1px solid black;
+  max-width: 250px;
+  padding: 10px;
+  margin: 25px;
 }
 
 .button-colors {
