@@ -23,12 +23,12 @@ User.remove({}).then(() => {
         age: 25,
         gender: 'Male',
         livesIn: 'Marietta, GA',
-        likesToClimb: 'Sport'
+        likesToClimb: 'Sport',
 
         // sportClimbGrade: '5.15',
         // tradGrad: '5.14',
         // boulderGrade: 'V16',
-        // photo: 'http://www.telegraph.co.uk/content/dam/news/2016/11/23/adam-ondra-instagram_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg?imwidth=450'
+    photo: 'http://www.montura.it/file_public/persone_persona_photogallery/121/image/3.jpg'
     })
     const boatRock = new Destination({
         name: 'Boat Rock',
@@ -81,10 +81,10 @@ User.remove({}).then(() => {
         age: 50,
         gender: 'Female',
         livesIn: 'Jasper, GA',
-        likesToClimb: 'Traditional'
+        likesToClimb: 'Traditional',
         // sportClimbGrade: '5.14',
         // boulderGrade: 'V13',
-        // photo: 'https://cdn-files.apstatic.com/climb/109451567_medium_1494350546.jpg'
+        photo: 'https://i.imgur.com/BveJhPw.jpg'
     })
     const redRiver = new Destination({
         name: 'Red River Gorge',
@@ -95,7 +95,7 @@ User.remove({}).then(() => {
         description: 'One of the best climbing destinations in the country with endless amounts of Traditional and Sport climbing routes'
     })
     const amarillo = new Climb({
-        name: 'amarillo',
+        name: 'Amarillo Sunset',
         type: 'Sport Climbing',
         grade: '5.11b',
         completed: true,
