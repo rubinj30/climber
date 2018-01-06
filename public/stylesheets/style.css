@@ -32,17 +32,18 @@ main {
     color: #173e43;
 }
 
-.prof-border-radius {
-  border-radius: 15px;
-  -webkit-box-shadow: 6px 6px 6px -6px #777;
-  -moz-box-shadow: 6px 6px 6px -6px #777;
-       box-shadow: 6px 6px 6px -6px #777;
+.card-shadow {
+  /* border-radius: 15px; */
+  -webkit-box-shadow: 8px 8px 8px -8px #777;
+  -moz-box-shadow: 8px 8px 8px -8px #777;
+       box-shadow: 8px 8px 8px -8px #777;
 }
 
 
 .index-photo {
   max-width: 200px;
   border: 4px;
+  padding-bottom: 5px;
 }
 
 .profile-photo {
@@ -50,10 +51,10 @@ main {
 }
 
 .index-profile-card {
-  border: 1px solid black;
-  max-width: 250px;
+  max-width: 220px;
   padding: 10px;
   margin: 25px;
+  background-color: white;
 }
 
 .button-colors {

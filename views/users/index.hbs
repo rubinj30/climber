@@ -3,16 +3,18 @@
 </div>
 <div>
     {{#each users}}
-    <a class='path-color' href="/users/{{this._id}}">
-        <div class='index-photo-div'>
-            <img class='climber-photo index-photo prof-border-radius ' src="{{this.photo}}" alt='climber\' s photo '>
-        </div>
-        <div class='index-label-color '>
+    <div class='index-profile-card card-shadow'>
+        <a class='path-color' href="/users/{{this._id}}">
+            <div class='index-photo-div'>
+                <img class='climber-photo index-photo' src="{{this.photo}}" alt='climber\' s photo '>
+            </div>
+            <div class='index-label-color '>
             {{this.username}}
-        </div>
-    </a>    
+            </div>
+        </a>    
         <div class='index-label-color '>
             {{this.age}} {{this.gender}}
+        </div>
         </div>
     {{/each}}
 </div>

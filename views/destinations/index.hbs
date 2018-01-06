@@ -3,11 +3,13 @@
     <a class='path-color' href="/users/{{userId}}"> {{username}}</a> / {{pageTitle}}
 </div>
 <div>
+
+    
     {{#each destinations}}
-    <div class='index-profile-card prof-border-radius'>
+    <div class='index-profile-card card-shadow'>
         <a class='path-color' href="/users/{{../userId}}/destinations/{{this._id}}">
 
-            <img class='destination-photo index-photo prof-border-radius' src="{{this.photo}}" alt='climber\' s photo '>
+            <img class='destination-photo index-photo' src="{{this.photo}}" alt='climber\' s photo '>
         <div class='index-label-color '>
             {{this.name}}
         </div>
