@@ -27,15 +27,29 @@ header {
   color: #dddfd4;
 }
 
+.homepage-img-div {
+  background-image: url('https://lh3.googleusercontent.com/-SuA4bB5DLiU/UkxiZ9Pr_VI/AAAAAAAACjA/nCU_qawET_w/w2048-h1362/M%2BBODY_wertz_0016_cc.jpg');
+  height: 100%;
+  width: 100%;
+}
 .header-text {
   color: #dddfd4;
   font-size: 50px;
   padding: 10px 0;
 }
 
-main {
-  padding: 0 75px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100;
+  
 }
+
+/* .inside-main {
+  padding: 0 75px;
+} */
 
 .app-title {
   display: flex; 
@@ -143,12 +157,13 @@ footer {
 }
 
 .horizontal {
-  max-width: 700px;
+  max-width: 700px; 
 }
 
 .photos-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .partner-status-color {

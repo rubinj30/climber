@@ -50,13 +50,14 @@ User.remove({}).then(() => {
         photo: 'http://gripped.com/wp-content/uploads/2015/04/jo.jpg'
     })
     const yellowArete = new Climb({
-        name: 'Keeper of the Boat',
+        name: 'Yellow Arete',
         type: 'Boulder',
         grade: 'V4',
         completed: true,
         gearNeeded: 'Crashpad',
         photo: 'https://i.imgur.com/RrZOBgb.jpg'
     })
+    // const keeper = 
     boatRock.climbs.push(wavesInMotion, yellowArete)
     const sandRock = new Destination({
         name: 'Sand Rock',

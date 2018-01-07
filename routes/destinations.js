@@ -31,6 +31,7 @@ router.get('/new', (request, response) => {
                 pageTitle: "Add Climbing Destination"
         })
     })
+    
 })
 
 

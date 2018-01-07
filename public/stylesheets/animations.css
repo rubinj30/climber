@@ -814,7 +814,7 @@ tossing
 ==============================================
 */
 
-.tossing-div:hover {
+.tossing:hover {
 	animation-name: tossing;
 	-webkit-animation-name: tossing;	
 
