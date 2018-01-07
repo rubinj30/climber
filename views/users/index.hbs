@@ -3,10 +3,10 @@
 </div>
 <div class='photos-container'>
     {{#each users}}
-    <div class='index-profile-card card-shadow tossing'>
+    <div class='index-profile-card card-shadow tossing-div'>
         <a class='path-color' href="/users/{{this._id}}">
             <div class='index-photo-div'>
-                <img class='climber-photo index-photo' src="{{this.photo}}" alt='climber\' s photo '>
+                <img class='climber-photo index-photo tossing-img' src="{{this.photo}}" alt='climber\' s photo '>
             </div>
             <div class='index-label-color '>
             {{this.username}}
@@ -15,7 +15,7 @@
         <div class='index-label-color '>
             {{this.age}} {{this.gender}}
         </div>
-        <div>{{this.climbingPartnerStatus}}</div>
+        <div class='partner-status-color'>{{this.climbingPartnerStatus}}</div>
     </div>
     {{/each}}
 </div>

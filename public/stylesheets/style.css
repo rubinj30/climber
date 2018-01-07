@@ -150,3 +150,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
 }
+
+.partner-status-color {
+  color: red;
+}

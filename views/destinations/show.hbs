@@ -8,7 +8,7 @@
 <h4>{{destination.name}}</h4>
 {{destination.description}}
 
-<div>
+<div class='photos-container'>
     {{#each destination.climbs}}
     <div class='index-profile-card card-shadow'>
         <a class='path-color' href="/users/{{../user._id}}/destinations/{{../destination._id}}/climbs/{{this._id}}">
@@ -34,7 +34,7 @@
     <div class='bottom-button'>
         <a class="button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}/edit">
             <button class="btn waves-effect waves-light button-colors">
-                Edit Info
+                Edit Destination
             </button>
         </a>
     </div>
