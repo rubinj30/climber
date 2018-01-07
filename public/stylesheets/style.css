@@ -10,11 +10,18 @@ header {
 
 .homepage-photo {
   width: 90vw;
+  padding-bottom: 10px;
 }
 
 .homepage-text {
-  color: #3fb0ac;
+  color: #173e43;
 }
+
+.homepage-button {
+  border: 2px solid black;
+  padding: 10px;
+}
+
 .header-text {
   color: #dddfd4;
   font-size: 50px;
@@ -52,8 +59,8 @@ main {
 
 
 .index-photo {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border: 4px;
   padding-bottom: 5px;
 }
@@ -64,8 +71,8 @@ main {
 }
 
 .index-profile-card {
-  max-width: 220px;
-  padding: 10px;
+  max-width: 280px;
+  padding: 15px;
   margin: 25px 0px;
   background-color: white;
   font-family: 'Permanent Marker';
@@ -111,3 +118,6 @@ main {
   background: red;
 }
 
+footer {
+  padding: 20px 0;
+}

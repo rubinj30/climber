@@ -7,7 +7,7 @@
 
 <h4>Add Climb</h4>
 
-<div>
+<div class='form-div'>
     <form action="/users/{{user._id}}/destinations/{{destination._id}}/climbs" method="POST">
         <div>
             <div>
@@ -16,25 +16,26 @@
             </div>
 
 
-            <div>
+            {{!-- <div>
                 <label for="type">Type of Climb (Ex: Boulder, Sport Climb, Trad Climb): </label>
                 <input type="text" name="type" required/>
-            </div>
+            </div> --}}
 
             <div>
                 <label for="grade">Difficulty Rating </label>
                 <input type="text" name="state" />
             </div>
+
             <div>
                 <label for="gearNeeded">What gear if any is needed to climb?</label>
                 <input type="text" name="gearNeeded">
             </div>
-
+{{!-- 
             <div>
                 <label for="completed">Successfully Climbed? </label>
                 <input type="text" name="completed" />
-            </div>
-            
+            </div> --}}
+
             <div>
                 <label for="description">Provide some brief details about the climb that could help others find/climb it </label>
                 <input type="text" name="description" />
@@ -42,15 +43,43 @@
 
             <div>
                 <label for="photo">Photo: </label>
-                <input type="text" name="photo" value='http://pmdvod.nationalgeographic.com/NG_Video_DEV/970/971/adv-beyond-the-edge-honnold_480x360.jpg'
+                <input type="text" name="photo" value='https://i.imgur.com/RxTRYBX.png'
                     required />
             </div>
+            <div>
+                <p>What type of climb is it? </p>
+                <input type="radio" id="style1" name="type" value="Sport Climbing">
+                <label for="style1">Sport</label>
 
-            <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Climb</button>
+                <input type="radio" id="style2" name="type" value="Traditional Climbing">
+                <label for="style2">Traditional</label>
 
+                <input type="radio" id="style3" name="type" value="Bouldering">
+                <label for="style3">Boulder</label>
+
+                <input type="radio" id="style4" name="type" value="Ice">
+                <label for="style4">Ice</label>
+
+                <input type="radio" id="style5" name="type" value="Alpine">
+                <label for="style5">Alpine</label>
+            </div>
+            <div>
+                <p>Have you successfully climbed this route? </p>
+                <input type="radio" id="status1" name="status" value="Climbed">
+                <label for="status1">Yes</label>
+
+                <input type="radio" id="status2" name="status" value="Working on it">
+                <label for="status2">Not yet but I'm working on it</label>
+
+                <input type="radio" id="status3" name="status" value="Hoping to attempt it soon">
+                <label for="status3">Haven't tried yet</label>
+            </div>
         </div>
-    </form>
-    <button class="btn waves-effect waves-light button-colors">
-        <a href="/users/{{user._id}}/destinations/{{destination._id}}">Cancel</a>
-    </button>
+        <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Climb</button>
+
+</div>
+</form>
+<button class="btn waves-effect waves-light button-colors">
+    <a href="/users/{{user._id}}/destinations/{{destination._id}}">Cancel</a>
+</button>
 </div>

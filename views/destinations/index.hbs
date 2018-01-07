@@ -2,27 +2,27 @@
     <a class='path-color' href="/users">Climbers</a> /
     <a class='path-color' href="/users/{{userId}}"> {{username}}</a> / {{pageTitle}}
 </div>
-<div>
 
+<div>
 
     {{#each destinations}}
     <div class='index-profile-card card-shadow ppr paper-raise'>
         <a class='path-color' href="/users/{{../userId}}/destinations/{{this._id}}">
 
             <img class='destination-photo index-photo' src="{{this.photo}}" alt='climber\' s photo '>
-        <div class='index-label-color '>
-            {{this.name}}
-        </div>
+            <div>
+                {{this.name}}
+            </div>
           
-        <div class='index-label-color '>
-            {{this.city}} {{this.state}}
-        </div>
+            <div>
+                {{this.city}} {{this.state}}
+            </div>
         </a>  
     </div>
     {{/each}}
 </div>
 
-<div class='bottom-buttons'>
+<div class='bottom-buttons '>
     <a class="button-colors" href="/users/{{userId}}/destinations/new">
         <button class="btn waves-effect waves-light button-colors">
             Add Climbing Destination
