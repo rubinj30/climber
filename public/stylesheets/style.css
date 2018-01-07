@@ -81,7 +81,7 @@ main {
 .index-profile-card {
   max-width: 370px;
   padding: 20px;
-  margin: 25px 0px;
+  margin: 25px 25px;
   background-color: white;
   font-family: 'Permanent Marker';
 }
@@ -144,4 +144,9 @@ footer {
 
 .horizontal {
   max-width: 700px;
+}
+
+.photos-container {
+  display: flex;
+  flex-wrap: wrap;
 }
