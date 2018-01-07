@@ -78,6 +78,53 @@ router.post('/', (request, response) => {
         })
 })
 
+router.get('/:climbId/edit', (request, response) => {
+    const userId = request.params.userId
+    const destinationId = request.params.destinationId
+    const climbId = request.params.climbId
+    console.log(`user ---- ${climbId}`)
+    User.findById(userId)
+        .then((user) => {
+            const destination = user.destinations.id(destinationId)
+            const climb = destination.climbs.id(climbId)
+            response.render('climbs/edit', {
+                user,
+                destination,
+                climb,
+                pageTitle: 'Update Climb'
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+      })
+  })
+
+router.put('/:climbId', (request, response) => {
+    const userId = request.params.userId
+    const destinationId = request.params.destinationId
+    const climbId = request.params.climbId
+    const updatedClimbInfo = request.body
+    User.findById(userId)
+        .then((user) => {
+            const destination = user.destinations.id(destinationId)
+            const climb = destination.climbs.id(climbId)
+
+            climb.name =  updatedClimbInfo.name
+            climb.city =  updatedClimbInfo.grade
+            climb.state =  updatedClimbInfo.gearNeeded
+            climb.description = updatedClimbInfo.description
+            climb.photo = updatedClimbInfo.photo
+            climb.type = updatedClimbInfo.type
+            climb.completed = updatedClimbInfo.completed
+            return user.save()         
+            console.log(user)
+    }).then(() => {
+        response.redirect(`/users/${userId}/destinations/${destinationId}/climbs/${climbId}`)
+    }).catch((err) => {
+        console.log(err)
+    })
+})
+
 router.get('/:climbId/delete', (request, response) => {
     const userId = request.params.userId
     const destinationId = request.params.destinationId
