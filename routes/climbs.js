@@ -81,6 +81,20 @@ router.post('/', (request, response) => {
 router.get('/:climbId/delete', (request, response) => {
     const userId = request.params.userId
     const destinationId = request.params.destinationId
+    const climbId = request.params.climbId
+    console.log(`climb id = ${climbId}`)
+    User.findById(userId)
+        .then((user) => {
+            const destination = user.destinations.id(destinationId)
+            const climb = destination.climbs.id(climbId)
+            console.log(`climb id = ${climb}`)
+            climb.remove()
+            return user.save()
+        }).then(() => {
+            response.redirect(`/users/${userId}/destinations/${destinationId}`)
+        }).catch((err) => {
+            console.log(err)
+        })    
 })
 
 module.exports = router

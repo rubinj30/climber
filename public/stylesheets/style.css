@@ -15,6 +15,9 @@ header {
 
 .homepage-text {
   color: #173e43;
+  padding: 20px 0px;
+
+  line-height: 30px;
 }
 
 .homepage-button {
@@ -122,4 +125,16 @@ main {
 
 footer {
   padding: 20px 0;
+}
+
+
+.homepage-photo {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .6s ease-in-out;
+	transition: .6s ease-in-out;
+}
+.homepage-photo:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
 }

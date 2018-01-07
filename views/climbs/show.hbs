@@ -6,6 +6,27 @@
     <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}/climbs/{{climb._id}}">{{climb.name}}</a>
 </div>
 
+
+<div class='top-buttons'>
+    <div class='top-button'>
+        <a class="button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}/climbs/{{climb._id}}/edit">
+            <button class="btn waves-effect waves-light button-colors">
+                Edit Climb
+            </button>
+        </a>
+    </div>
+
+    <div class='top-button'>
+        <a class="button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}/climbs/{{climb._id}}/delete">
+            <button class="btn waves-effect waves-light button-colors warning">
+                Remove Climb
+            </button>
+        </a>
+    </div>
+</div>
+
+
+
 <div>
     <div>{{climb.name}}</div>
     <div>Type: {{climb.type}}</div>
