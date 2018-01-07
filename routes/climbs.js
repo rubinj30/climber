@@ -4,25 +4,6 @@ const User = require('../db/models/User')
 const Destination = require('../db/models/Destination')
 const bodyParser = require('body-parser')
 
-// router.get('/', (request, response) => {
-//     const userId = request.params.userId
-    
-//     User.findById(userId)   
-//         .then((user) => {
-//             const destination = user.destinations.id(destinationId)
-
-//             response.render('gifts/index', {
-//                 userId: user._id,
-//                 username: user.username,
-//                 destinations: user.destinations,
-//                 pageTitle: "Climbs"
-//             })
-//         })
-//         .catch((err) => {
-//             console.log(err)
-//         })
-// })
-
 router.get('/new', (request, response) => {
     const userId = request.params.userId
     const destinationId = request.params.destinationId
@@ -87,6 +68,7 @@ router.get('/:climbId/edit', (request, response) => {
         .then((user) => {
             const destination = user.destinations.id(destinationId)
             const climb = destination.climbs.id(climbId)
+            console.log(`CLIMB ----- ${climb}`)
             response.render('climbs/edit', {
                 user,
                 destination,
@@ -108,7 +90,7 @@ router.put('/:climbId', (request, response) => {
         .then((user) => {
             const destination = user.destinations.id(destinationId)
             const climb = destination.climbs.id(climbId)
-
+            console.log(climb)
             climb.name =  updatedClimbInfo.name
             climb.city =  updatedClimbInfo.grade
             climb.state =  updatedClimbInfo.gearNeeded
