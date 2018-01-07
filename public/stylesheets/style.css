@@ -40,6 +40,9 @@ main {
 .app-title {
   display: flex; 
   justify-content: center;
+  -webkit-box-shadow: 8px 8px 8px -8px #777;
+  -moz-box-shadow: 8px 8px 8px -8px #777;
+       box-shadow: 8px 8px 8px -8px #777;
 }
 
 .path {
@@ -64,8 +67,8 @@ main {
 
 
 .index-photo {
-  width: 250px;
-  height: 250px;
+  width: 330px;
+  height: 330px;
   border: 4px;
   padding-bottom: 5px;
 }
@@ -76,8 +79,8 @@ main {
 }
 
 .index-profile-card {
-  max-width: 280px;
-  padding: 15px;
+  max-width: 370px;
+  padding: 20px;
   margin: 25px 0px;
   background-color: white;
   font-family: 'Permanent Marker';
@@ -120,7 +123,7 @@ main {
 }
 
 .warning:hover {
-  background: red;
+  background: #f44e42;
 }
 
 footer {
@@ -128,13 +131,15 @@ footer {
 }
 
 
-.homepage-photo {
+.homepage-photo:hover {
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
-	-webkit-transition: .6s ease-in-out;
-	transition: .6s ease-in-out;
+	-webkit-transition: .4s ease-in-out;
+	transition: .4s ease-in-out;
 }
-.homepage-photo:hover {
+.homepage-photo {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
 }
+
+
