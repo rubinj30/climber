@@ -11,13 +11,14 @@
 <div>
     {{#each destination.climbs}}
     <div class='index-profile-card card-shadow'>
-        <div>
-            <a href=""></a>
-            <img class="index-photo img-border-radius" src="{{this.photo}}" alt="photo of climbing route">
-        </div>
-        <div>{{this.name}}</div>
-        <div>{{this.grade}}</div>
-        <div>{{this._id}}</div>
+        <a class='path-color' href="/users/{{../user._id}}/destinations/{{../destination._id}}/climbs/{{this.name}}">
+            <div>
+                <img class="index-photo img-border-radius" src="{{this.photo}}" alt="photo of climbing route">
+            </div>
+            <div>{{this.name}}</div>
+            <div>{{this.grade}}</div>
+            <div>{{this._id}}</div>
+        </a>
     </div>
     {{/each}}
 </div>
