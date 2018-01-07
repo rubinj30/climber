@@ -7,6 +7,29 @@
 </div>
 
 
+
+
+<div class="col s10 m7">
+    <h4 class="header">{{climb.name}}</h4>
+    <div class="card horizontal">
+        <div class="card-image">
+            <img src="{{climb.photo}}">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+                <div>{{climb.name}}</div>
+                <div>Type: {{climb.type}}</div>
+                <div>Grade: {{climb.grade}}</div>
+                <div>Status: {{climb.completed}}</div>
+                <div>Gear Needed: {{climb.gearNeeded}}</div>
+                <div>Description: {{climb.description}}</div>
+            </div>
+            <div class="card-action">
+                <a href="/users/{{user._id}}/destinations">My favorite climbing spots</a>
+            </div>
+        </div>
+    </div>
+</div>
 <div class='top-buttons'>
     <div class='top-button'>
         <a class="button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}/climbs/{{climb._id}}/edit">
@@ -23,18 +46,4 @@
             </button>
         </a>
     </div>
-</div>
-
-
-
-<div>
-    <div>{{climb.name}}</div>
-    <div>Type: {{climb.type}}</div>
-    <div>Grade: {{climb.grade}}</div>
-    <div>Status:  {{climb.completed}}</div>
-    <div>Gear Needed: {{climb.gearNeeded}}</div>
-    <div>Description: {{climb.description}}</div>
-</div>
-<div class='profile-photo-container'>
-    <img class="profile-photo card-shadow" src="{{climb.photo}}" alt="Climber's Profile Photo">
 </div>

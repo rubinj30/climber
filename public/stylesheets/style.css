@@ -87,8 +87,8 @@ main {
 }
 
 .button-colors {
-  background-color: #fae596;
-  color: #173e43;
+  background-color: #FE5D26;
+  color: #dddfd4;
   text-decoration: none;
 }
 
@@ -122,9 +122,9 @@ main {
   padding: 0 5px 20px 0;
 }
 
-.warning:hover {
-  background: #f44e42;
-}
+/* .warning:hover {
+  background: black;
+} */
 
 footer {
   padding: 20px 0;
@@ -142,4 +142,6 @@ footer {
 	filter: grayscale(0);
 }
 
-
+.horizontal {
+  max-width: 700px;
+}
