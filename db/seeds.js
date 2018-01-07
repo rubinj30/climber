@@ -23,7 +23,7 @@ User.remove({}).then(() => {
         age: 25,
         gender: 'Male',
         livesIn: 'Marietta, GA',
-        climbingPartnerStatus: 'Looking for Partner(s)',
+        climbingPartnerStatus: 'Looking for climbing partner(s)',
         likesToClimb: 'Sport',
         skillLevel: 'Beginner',
 
@@ -99,13 +99,13 @@ User.remove({}).then(() => {
     return adamOndra.save()
 }).then(() => {
     const lynnHill = new User({
-        username: 'lynnster',
+        username: 'Lynn-Duhhh',
         email: 'lynn@gmail.com',
-        age: 50,
+        age: 52,
         gender: 'Female',
         livesIn: 'Jasper, GA',
         likesToClimb: 'Traditional',
-        climbingPartnerStatus: 'Looking for Partner(s)',
+        climbingPartnerStatus: 'In committed climbing partnership',
         skillLevel: 'Advanced',
         // sportClimbGrade: '5.14',
         // boulderGrade: 'V13',
@@ -149,6 +149,19 @@ User.remove({}).then(() => {
     leda.climbs.push(speedwayBoogie)
     lynnHill.destinations.push(redRiver, leda)
     return lynnHill.save()
+}).then(() => {
+    const sam = new User({
+        username: "Yosemite Sam",
+        email: 'sam@something.com',
+        age: 24,
+        gender: 'Male',
+        livesIn: 'Atlanta, GA',
+        likesToClimb: 'All of it',
+        climbingPartnerStatus: 'In open climbing partnership',
+        skillLevel: 'Advanced',
+        photo: 'https://i.imgur.com/wp0vhTP.jpg'
+    })
+    return sam.save()
 
 }).catch((err) => {
     console.log(`*** ERROR SEEDING DATA ${err}`)

@@ -82,7 +82,7 @@ router.get('/:destinationId/edit', (request, response) => {
             response.render('destinations/edit', {
                 user,
                 destination,
-                pageTitle: 'Update Destination Info'
+                pageTitle: 'Edit Destination'
             })
         })
         .catch((error) => {

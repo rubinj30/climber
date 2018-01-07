@@ -51,7 +51,7 @@ router.get('/:userId/edit', (request, response) => {
     .then((user) => {
       response.render('users/edit', {
         user,
-        pageTitle: 'Update Profile'
+        pageTitle: 'Edit Profile'
       })
     })
     .catch((error) => {
