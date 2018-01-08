@@ -47,6 +47,7 @@ User.remove({}).then(() => {
         grade: 'V3',
         completed: false,
         gearNeeded: 'Crash pad',
+        description: 'Fun climb up small footholds. Watch out for the sketchy landing!',
         photo: 'http://gripped.com/wp-content/uploads/2015/04/jo.jpg'
     })
     const yellowArete = new Climb({
@@ -195,6 +196,16 @@ User.remove({}).then(() => {
         skillLevel: 'Advanced',
         photo: 'https://i.imgur.com/OS8KXUa.png'
     })
+    const yosemite = new Destination({
+        name: 'Yosemite National Park',
+        city: 'Yosemite',
+        state: 'CA',
+        location: '37.74, -119.573',
+        type: 'Traditional, Sport Climbing, and Bouldering',
+        description: 'Yosemite National Park is it: The iconic birthplace of American rock climbing and the most famous climbing area in the world.',
+        photo: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Yosemite_Valley_observation.jpg'
+    })
+    sam.destinations.push(yosemite)
     return sam.save()
 }).then(() => {
     const margo = new User({

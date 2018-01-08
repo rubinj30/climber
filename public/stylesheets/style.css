@@ -59,7 +59,7 @@ h2 {
 
 .path {
   padding-left: 10px;
-  color: #173e43;
+  font-size: 16px;
   padding-bottom: 25px;
 }
 
@@ -69,6 +69,8 @@ h2 {
 
 .path-color:hover {
 color: #3fb0ac;
+border-top: 2px solid #FE5D26;
+
 }
 
 
@@ -87,12 +89,31 @@ color: #3fb0ac;
        box-shadow: 8px 8px 8px -8px #777;
 }
 
+main {
+  padding: 10px;
+} 
+
+@media (min-width: 680px) {
+  main {
+    padding: 0 75px;
+  }
+}
+
 .index-photo {
-  width: 330px;
-  height: 330px;
+  width: 280px;
+  height: 280px;
   border: 4px;
   padding-bottom: 5px;
 }
+
+/* @media (min-width: 680) {
+  .index-photo {
+    width: 330px;
+    height: 330px;
+    border: 4px;
+    padding-bottom: 5px;
+  }
+} */
 
 .profile-photo {
   max-width: 400px;
@@ -101,11 +122,22 @@ color: #3fb0ac;
 
 .index-profile-card {
   max-width: 370px;
-  padding: 20px;
+  padding: 10px;
   margin: 25px 25px;
   background-color: white;
   font-family: 'Permanent Marker';
 }
+
+/* 
+@media (max-width: 680) {
+  .index-profile-card {
+    max-width: 370px;
+    padding: 20px;
+    margin: 25px 25px;
+    background-color: white;
+    font-family: 'Permanent Marker';
+  }
+} */
 
 .button-colors {
   background-color: #FE5D26;
