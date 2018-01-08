@@ -17,6 +17,8 @@ const climbs = require('./routes/climbs')
 
 const app = express();
 
+// MIDDLEWARE 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));

@@ -7,8 +7,6 @@
 </div>
 
 
-
-
 <div class="col s10 m7">
     <h4 class="header">{{climb.name}}</h4>
     <div class="card horizontal">
@@ -29,8 +27,10 @@
         </div>
     </div>
 </div>
-<div class='top-buttons'>
-    <div class='top-button'>
+
+
+<div class='bottom-buttons'>
+    <div class='bottom-button'>
         <a class="button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}/climbs/{{climb._id}}/edit">
             <button class="btn waves-effect waves-light button-colors">
                 Edit Climb
@@ -38,7 +38,7 @@
         </a>
     </div>
 
-    <div class='top-button'>
+    <div class='bottom-button'>
         <a class="button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}/climbs/{{climb._id}}/delete">
             <button class="btn waves-effect waves-light button-colors warning">
                 Remove Climb

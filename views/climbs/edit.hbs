@@ -17,7 +17,7 @@
 
             <div>
                 <label for="grade">Difficulty Rating </label>
-                <input type="text" name="grade" value="{{climb.grade}}"/>
+                <input type="text" name="grade" value="{{climb.grade}}" />
             </div>
 
             <div>
@@ -60,14 +60,18 @@
                 <label for="status2">Not yet but I'm working on it</label>
 
                 <input type="radio" id="status3" name="status" value="Hoping to attempt it soon">
-                <label for="status3">Haven't tried yet</label>
+                <label for="status3">Haven't tried it yet</label>
             </div>
         </div>
-        <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Update</button>
-
-</div>
-</form>
-<button class="btn waves-effect waves-light button-colors">
-    <a href="/users/{{user._id}}/destinations/{{destination._id}}/climbs/{{climb._id}}">Cancel</a>
-</button>
+        <div class='bottom-buttons'>
+            <div class='bottom-button'>
+                <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Submit</button>
+            </div>
+            <div class='bottom-button'>
+                <a class="btn waves-effect waves-light button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}/climbs/{{climb._id}}">
+                    Cancel
+                </a>
+            </div>
+        </div>
+    </form>
 </div>

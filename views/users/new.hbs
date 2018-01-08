@@ -24,8 +24,12 @@
                 <input type="text" name="photo" value='https://goo.gl/yYQiTT' required />
             </div>
             <div>
-                <label for="gender">Gender: </label>
-                <input type="text" name="gender" />
+                <label for="gender">Please select your gender:</label>
+                <input type="radio" id="gender1" name="gender" value="Female">
+                <label for="gender1">Female</label>
+
+                <input type="radio" id="gender2" name="gender" value="Male">
+                <label for="gender2">Male</label>
             </div>
             <div>
                 <p>What is your favorite style of climbing? </p>
@@ -63,12 +67,16 @@
                 <input type="radio" id="climbingPartnerStatus3" name="climbingPartnerStatus" value="In open climbing partnership">
                 <label for="climbingPartnerStatus3">In open climbing partnership</label>
             </div>
-            <div class='buttons-after-form'>
-                <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Climber</button>
-                <button class="btn waves-effect waves-light button-colors">
-                    <a href="/users">Cancel</a>
-            </div>
-            </button>
+                <div class='bottom-buttons'>
+                    <div class='bottom-button'>
+                        <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Submit</button>
+                    </div>
+                    <div class='bottom-button'>
+                        <a class="btn waves-effect waves-light button-colors" href="/users">
+                            Cancel
+                        </a>
+                    </div>
+                </div>
         </form>
     </div>
 </div>

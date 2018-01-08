@@ -39,13 +39,13 @@ User.remove({}).then(() => {
         location: '33.72, -84.562',
         typeOfClimbing: 'Bouldering',
         description: 'Small boulder field with sharp granite boulders nestled in a metro-Atlanta neighborhood',
-        photo: 'https://cdn-files.apstatic.com/climb/106081440_medium_1494076517.jpg'
+        photo: 'https://i.imgur.com/Ubn8zb4.jpg'
     })
     const wavesInMotion = new Climb({
         name: 'Waves in Motion',
         type: 'Boulder',
         grade: 'V3',
-        completed: false,
+        completed: 'Yes',
         gearNeeded: 'Crash pad',
         description: 'Fun climb up small footholds. Watch out for the sketchy landing!',
         photo: 'http://gripped.com/wp-content/uploads/2015/04/jo.jpg'
@@ -54,7 +54,7 @@ User.remove({}).then(() => {
         name: 'Yellow Arete',
         type: 'Boulder',
         grade: 'V4',
-        completed: true,
+        completed: 'Yes',
         gearNeeded: 'Crashpad',
         photo: 'https://i.imgur.com/RrZOBgb.jpg'
     })
@@ -68,14 +68,17 @@ User.remove({}).then(() => {
         typeOfClimbing: 'Sport Climbing',
         description: 'Accessible single-pitch sport climbing',
         photo: 'https://i.pinimg.com/originals/b4/35/d8/b435d8d6b70c19848d7ac73e2546049a.jpg'
+    
     })
     const misty = new Climb({
         name: 'Misty',
         type: 'Sport Climbing',
         grade: '5.10b',
-        completed: true,
+        completed: 'Yes',
         gearNeeded: '7 quickdraws and anchors',
-        photo: 'https://cdn-files.apstatic.com/climb/112894410_large_1494625777.jpg'
+        photo: 'https://cdn-files.apstatic.com/climb/112894410_large_1494625777.jpg',
+        description: 'A classic single-pitch route that starts with a boulder problem, and ends with\
+    a long face climb'
     })
     sandRock.climbs.push(misty)
     const stoneSummit = new Destination({
@@ -84,19 +87,31 @@ User.remove({}).then(() => {
         state: 'GA',
         location: '33.88, -84.27',
         typeOfClimbing: 'Indoor bouldering, top-rope and sport climbing',
-        description: 'One of the largest climbing gyms in the country, filled with massive walls and endless amounts of boulder problems.',
+        description: 'One of the largest climbing gyms in the country, filled with massive walls and endless amounts of boulder problems.\
+        There is also a full gym, yoga studio, day care, and probably even a basketball court.',
         photo: 'http://pointsnorthatlanta.com/wp-content/uploads/2015/06/Stone-Summit-3.jpg'
     })
     const blueRoute = new Climb({
         name: 'Blue Route',
         type: 'Boulder',
         grade: 'V6',
-        completed: false,
+        completed: 'Haven\t tried it',
         gearNeeded: 'None',
-        photo: 'http://www.ssclimbing.com/docs/2015/kennesaw/04.jpg'
+        photo: 'http://www.ssclimbing.com/docs/2015/kennesaw/04.jpg',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s\
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
 
     })
-    stoneSummit.climbs.push(blueRoute)
+    const redProblem = new Climb({
+        name: 'Problem # 2',
+        type: 'Boulder',
+        grade: 'V8',
+        completed: 'Not yet but I\'m working on it',
+        gearNeeded: 'None',
+        photo: 'http://www.ssclimbing.com/docs/2015/kennesaw/04.jpg',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+    })
+    stoneSummit.climbs.push(blueRoute, redProblem)
     adamOndra.destinations.push(boatRock, sandRock, stoneSummit)
     return adamOndra.save()
 }).then(() => {
@@ -125,7 +140,7 @@ User.remove({}).then(() => {
         name: 'Amarillo Sunset',
         type: 'Sport Climbing',
         grade: '5.11b',
-        completed: false,
+        completed: 'Not yet but I\'m working on it',
         gearNeeded: '8 quickdraws and anchors',
         photo: 'https://cdn-files.apstatic.com/climb/107404089_medium_1494186810.jpg'
     })
@@ -133,7 +148,7 @@ User.remove({}).then(() => {
         name: 'Golden Ticket',
         type: 'Sport Climbing',
         grade: '5.14c',
-        completed: true,
+        completed: 'Yes',
         gearNeeded: '10 quickdraws and anchors',
         photo: 'https://i.imgur.com/EbEP5tU.png'
     })    
@@ -143,6 +158,7 @@ User.remove({}).then(() => {
         city: 'Las Vegas',
         state: 'NV',
         location: '36.131, -115.425',
+        completed: 'Haven\'t tried it yet',
         type: 'Traditional and Sport Climbing',
         description: 'A few thousand routes, generally warm weather, every kind climbing from short sport routes to big 20-pitch outings, nearby Las Vegas for off-rock activities. Who could ask for more?',
         photo: 'https://i.imgur.com/eqgoFeX.jpg'
@@ -151,7 +167,7 @@ User.remove({}).then(() => {
         name: 'Cutting Edge',
         type: 'Boulder',
         grade: 'V5',
-        completed: false,
+        completed: 'Haven\'t tried it yet',
         gearNeeded: 'Standard Trad rack',
         photo: 'https://i.imgur.com/2gjioIN.jpg'
     })
@@ -159,7 +175,7 @@ User.remove({}).then(() => {
         name: 'Waterworld',
         type: 'Sport Climbing',
         grade: '5.12b',
-        completed: true,
+        completed: 'Yes',
         gearNeeded: '9 quickdraws and anchors',
         photo: 'https://cdn-files.apstatic.com/climb/111115198_large_1494340342.jpg'
     })
@@ -177,7 +193,7 @@ User.remove({}).then(() => {
         name: 'Speedway Boogie',
         type: 'Sport Climbing',
         grade: '5.10b',
-        completed: false,
+        completed: 'Yes',
         gearNeeded: '6 quickdraws and anchors',
         photo: 'https://cdn-files.apstatic.com/climb/106392755_medium_1494104543.jpg'
     })
@@ -202,7 +218,12 @@ User.remove({}).then(() => {
         state: 'CA',
         location: '37.74, -119.573',
         type: 'Traditional, Sport Climbing, and Bouldering',
-        description: 'Yosemite National Park is it: The iconic birthplace of American rock climbing and the most famous climbing area in the world.',
+        description: 'Yosemite Valley is THE PLACE for many rock climbers. A literal mecca for climbers across the globe,\
+        the crags and walls of "The Valley" see thousands of climber-days in the course of a year. During the height of \
+        the season, it\'s typical to hear climbers on El Capitan yelling back and forth in English, German, Japanese, Russian \
+        and many other languages. In this one place, many factors come together to form a nearly perfect arena for rock climbing;\
+        mild weather, beautiful scenery, and incredible granite walls perfectly suited to climbing. On a rest day, visit the many\
+        tremendous waterfalls, hike some of the beautiful trails, and breathe in one of the most incredible places in the entire country.',
         photo: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Yosemite_Valley_observation.jpg'
     })
     sam.destinations.push(yosemite)

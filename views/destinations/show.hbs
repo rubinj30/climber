@@ -6,7 +6,17 @@
 </div>
 
 <h4>{{destination.name}}</h4>
-{{destination.description}}
+<div class='destination-show-top-div'>
+    <div>
+        <img class='destination-show-photo' src="{{destination.photo}}" alt="">
+    </div>
+    <div>Destination Description:</div>
+    <br>
+    {{destination.description}}
+</div>
+<br>
+
+<h5>Check out the climbs that {{user.username}} has completed, is working on, or hoping to climb!</h5>
 
 <div class='photos-container'>
     {{#each destination.climbs}}
