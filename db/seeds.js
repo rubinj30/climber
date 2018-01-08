@@ -47,8 +47,8 @@ User.remove({}).then(() => {
         grade: 'V3',
         completed: 'Yes',
         gearNeeded: 'Crash pad',
-        description: 'Fun climb up small footholds. Watch out for the sketchy landing!',
-        photo: 'http://gripped.com/wp-content/uploads/2015/04/jo.jpg'
+        photo: 'https://i.imgur.com/16MLwFr.jpg',
+        description: 'Fun climb up small footholds. Watch out for the sketchy landing!'
     })
     const yellowArete = new Climb({
         name: 'Yellow Arete',
@@ -263,7 +263,7 @@ User.remove({}).then(() => {
         photo: 'https://i.imgur.com/8R9UiDl.png',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     })
-    
+
     joshuaTree.climbs.push(someRoute)
     margo.destinations.push(joshuaTree)
     return margo.save()

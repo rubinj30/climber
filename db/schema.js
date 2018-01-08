@@ -17,6 +17,7 @@ const ClimbSchema = new Schema(
     completed: String,
     gearNeeded: String,
     photo: String,
+    description: String
   },
   {
     timestamps: {}
