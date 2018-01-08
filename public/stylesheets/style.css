@@ -20,6 +20,7 @@ header {
   line-height: 30px;
 }
 
+
 .homepage-button {
   border: 2px solid black;
   padding: 10px;
@@ -28,16 +29,16 @@ header {
   width: 50px;
 }
 
-/* .homepage-img-div {
-  background-image: url('https://lh3.googleusercontent.com/-SuA4bB5DLiU/UkxiZ9Pr_VI/AAAAAAAACjA/nCU_qawET_w/w2048-h1362/M%2BBODY_wertz_0016_cc.jpg');
-  height: 50%;
-  width: 50%;
-} */
+.homepage-go-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 .homepage-img {
   width: 90vw;
-
 }
+
 .header-text {
   color: #dddfd4;
   font-size: 50px;
