@@ -39,8 +39,36 @@ header {
   font-family: 'Titillium Web', sans-serif;
 }
 
-main {
-  padding: 0 75px;
+.test-something {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 680px) {
+  main {
+    padding: 0 20px;
+  }
+  main {
+    padding: 0 75px;
+  } 
+}
+
+h2 {
+  padding-left: 10px;
+}
+
+.path {
+  padding-left: 10px;
+  color: #173e43;
+  padding-bottom: 25px;
+}
+
+.path-color {
+  color: #173e43;
+}
+
+.path-color:hover {
+color: #3fb0ac;
 }
 
 
@@ -52,26 +80,12 @@ main {
        box-shadow: 8px 8px 8px -8px #777;
 }
 
-.path {
-  color: #173e43;
-  padding-bottom: 25px;
-}
-
-.path-color {
-    color: #173e43;
-}
-
-.path-color:hover {
-  color: #3fb0ac;
-}
-
 .card-shadow {
   /* border-radius: 15px; */
   -webkit-box-shadow: 8px 8px 8px -8px #777;
   -moz-box-shadow: 8px 8px 8px -8px #777;
        box-shadow: 8px 8px 8px -8px #777;
 }
-
 
 .index-photo {
   width: 330px;
@@ -100,12 +114,17 @@ main {
 }
 
 .index-label-color {
-  color: #300032;
+  color: black;
 }
 
 .card-content {
   line-height: 30px;
   font-family: 'Titillium Web', sans-serif;
+}
+
+.text-link-in-card {
+  color: #173e43;
+  
 }
 
 .form-div {
@@ -134,10 +153,6 @@ main {
   padding: 0 5px 20px 0;
 }
 
-/* .warning:hover {
-  background: black;
-} */
-
 footer {
   padding: 20px 0;
 }
@@ -165,4 +180,8 @@ footer {
 
 .partner-status-color {
   color: red;
+}
+
+.user-card-info {
+  text-transform: bold;
 }

@@ -134,7 +134,7 @@ User.remove({}).then(() => {
         grade: '5.14c',
         completed: true,
         gearNeeded: '10 quickdraws and anchors',
-        photo: 'http://rockandice.com/wp-content/uploads/2017/09/Michaela-GT-web.jpg'
+        photo: 'https://i.imgur.com/EbEP5tU.png'
     })    
     redRiver.climbs.push(goldenTicket, amarillo)
     const redRocks = new Destination({
@@ -148,11 +148,11 @@ User.remove({}).then(() => {
     })
     const cuttingEdge = new Climb({
         name: 'Cutting Edge',
-        type: 'Trad Climbing',
-        grade: '5.11c',
+        type: 'Boulder',
+        grade: 'V5',
         completed: false,
         gearNeeded: 'Standard Trad rack',
-        photo: 'https://imgur.com/327bb4a7-1925-45dd-9aff-4034eb67b260'
+        photo: 'https://i.imgur.com/2gjioIN.jpg'
     })
     const something = new Climb({
         name: 'Waterworld',
@@ -193,8 +193,10 @@ User.remove({}).then(() => {
         likesToClimb: 'All of it',
         climbingPartnerStatus: 'In open climbing partnership',
         skillLevel: 'Advanced',
-        photo: 'https://i.imgur.com/wp0vhTP.jpg'
+        photo: 'https://i.imgur.com/OS8KXUa.png'
     })
+    return sam.save()
+}).then(() => {
     const margo = new User({
         username: "margo-jain",
         email: 'margo@something.com',
@@ -204,11 +206,9 @@ User.remove({}).then(() => {
         likesToClimb: 'Sport',
         climbingPartnerStatus: 'In open climbing partnership',
         skillLevel: 'Advanced',
-        photo: 'https://i.imgur.com/ffUPQ34.jpg'
+        photo: 'https://i.imgur.com/UQpIGfj.png'
     })
-    return sam.save()
     return margo.save()
-
 }).catch((err) => {
     console.log(`*** ERROR SEEDING DATA ${err}`)
 }).then(() => {
