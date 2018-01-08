@@ -35,21 +35,14 @@ header {
 .header-text {
   color: #dddfd4;
   font-size: 50px;
-  padding: 10px 0;
+  padding: 15px 0;
+  font-family: 'Titillium Web', sans-serif;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100;
-  
-}
-
-/* .inside-main {
+main {
   padding: 0 75px;
-} */
+}
+
 
 .app-title {
   display: flex; 
@@ -110,6 +103,11 @@ header {
   color: #300032;
 }
 
+.card-content {
+  line-height: 30px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
 .form-div {
   width: 600px;
 }
@@ -163,7 +161,6 @@ footer {
 .photos-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .partner-status-color {

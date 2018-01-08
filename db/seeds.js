@@ -124,12 +124,46 @@ User.remove({}).then(() => {
         name: 'Amarillo Sunset',
         type: 'Sport Climbing',
         grade: '5.11b',
-        completed: true,
+        completed: false,
         gearNeeded: '8 quickdraws and anchors',
         photo: 'https://cdn-files.apstatic.com/climb/107404089_medium_1494186810.jpg'
     })
-    redRiver.climbs.push(amarillo)
+    const goldenTicket = new Climb({
+        name: 'Golden Ticket',
+        type: 'Sport Climbing',
+        grade: '5.14c',
+        completed: true,
+        gearNeeded: '10 quickdraws and anchors',
+        photo: 'http://rockandice.com/wp-content/uploads/2017/09/Michaela-GT-web.jpg'
+    })    
+    redRiver.climbs.push(goldenTicket, amarillo)
+    const redRocks = new Destination({
+        name: 'Red Rock National Park',
+        city: 'Las Vegas',
+        state: 'NV',
+        location: '36.131, -115.425',
+        type: 'Traditional and Sport Climbing',
+        description: 'A few thousand routes, generally warm weather, every kind climbing from short sport routes to big 20-pitch outings, nearby Las Vegas for off-rock activities. Who could ask for more?',
+        photo: 'https://i.imgur.com/eqgoFeX.jpg'
+    })
+    const cuttingEdge = new Climb({
+        name: 'Cutting Edge',
+        type: 'Trad Climbing',
+        grade: '5.11c',
+        completed: false,
+        gearNeeded: 'Standard Trad rack',
+        photo: 'https://imgur.com/327bb4a7-1925-45dd-9aff-4034eb67b260'
+    })
+    const something = new Climb({
+        name: 'Waterworld',
+        type: 'Sport Climbing',
+        grade: '5.12b',
+        completed: true,
+        gearNeeded: '9 quickdraws and anchors',
+        photo: 'https://cdn-files.apstatic.com/climb/111115198_large_1494340342.jpg'
+    })
 
+    redRocks.climbs.push(cuttingEdge, something)
     const leda = new Destination({
         name: 'Leda',
         city: 'Chattanooga',
@@ -137,7 +171,6 @@ User.remove({}).then(() => {
         location: '35.236, -85.227',
         type: 'Traditional and Sport Climbing',
         description: 'Roadside crag along the winding roads of Chattanooga. It is mostly Sport climbing with some Traditional mixed in.'
-    
     })
     const speedwayBoogie = new Climb({
         name: 'Speedway Boogie',
@@ -145,7 +178,7 @@ User.remove({}).then(() => {
         grade: '5.10b',
         completed: false,
         gearNeeded: '6 quickdraws and anchors',
-        photo: 'https://cdn-files.apstatic.com/climb/108776037_large_1494295828.jpg'
+        photo: 'https://cdn-files.apstatic.com/climb/106392755_medium_1494104543.jpg'
     })
     leda.climbs.push(speedwayBoogie)
     lynnHill.destinations.push(redRiver, leda)
@@ -161,6 +194,17 @@ User.remove({}).then(() => {
         climbingPartnerStatus: 'In open climbing partnership',
         skillLevel: 'Advanced',
         photo: 'https://i.imgur.com/wp0vhTP.jpg'
+    })
+    const margo = new User({
+        username: "margo-jain",
+        email: 'margo@something.com',
+        age: 21,
+        gender: 'Female',
+        livesIn: 'Suwanee, GA',
+        likesToClimb: 'Sport',
+        climbingPartnerStatus: 'In open climbing partnership',
+        skillLevel: 'Advanced',
+        photo: 'https://i.imgur.com/ffUPQ34.jpg'
     })
     return sam.save()
 
