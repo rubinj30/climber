@@ -3,7 +3,7 @@
 This is an app that makes it easier to find other climbers with similar climbing styles, levels of skill, and favorite destinations. Or you can just see what others in your area are climbing. 
 
 ## Link to site
-[Come check out the site!](https://shrouded-mesa-61813.herokuapp.com/
+https://shrouded-mesa-61813.herokuapp.com/
 
 #### Technologies/Frameworks used:
 MEN stack:
@@ -22,12 +22,12 @@ Other:
 https://trello.com/b/ZNCgzLw6/climbing-app
 
 #### ERDs
-![Image of ERDs](./public/images/ERDs.png)
+[Image of ERDs](./public/images/ERDs.png)
 
 #### Wireframes
-![Image of Wireframe 1](./public/images/Wireframe1.jpg)
-![Image of Wireframe 1](./public/images/Wireframe2.jpg)
-![Image of Wireframe 1](./public/images/Wireframe3.jpg)
+[Image of Wireframe 1](./public/images/Wireframe1.jpg)
+[Image of Wireframe 2](./public/images/Wireframe2.jpg)
+[Image of Wireframe 3](./public/images/Wireframe3.jpg)
 
 ### Remaining goals 
 - Add google distance API to tell how far you are from another climber or destination
