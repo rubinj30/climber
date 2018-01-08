@@ -1,5 +1,6 @@
 <div class="path">
-    <a class='path-color' href="/users">> Climbers</a> >
+    >
+    <a class='path-color' href="/users"> Climbers</a> > 
     <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> >
     <a class='path-color' href="/users/{{user._id}}/destinations">Destinations</a> >
     <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}">{{destination.name}}</a> >
@@ -11,7 +12,7 @@
     <h4 class="header">{{climb.name}}</h4>
     <div class="card horizontal">
         <div class="card-image">
-            <img class="materialboxed" width="650" src="{{climb.photo}}">
+            <img src="{{climb.photo}}">
         </div>
         <div class="card-stacked">
             <div class="card-content">

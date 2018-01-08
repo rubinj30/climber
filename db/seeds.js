@@ -18,7 +18,7 @@ mongoose.connection.on('error', (error) => {
 
 User.remove({}).then(() => {
     const adamOndra = new User({
-        username: 'AdOndraZilla',
+        username: 'Ad-Ondra',
         email: 'adam@me.com',
         age: 25,
         gender: 'Male',
@@ -115,7 +115,7 @@ User.remove({}).then(() => {
     return adamOndra.save()
 }).then(() => {
     const lynnHill = new User({
-        username: 'Lynn-Duhhh',
+        username: 'Lynn-Duh',
         email: 'lynn@gmail.com',
         age: 52,
         gender: 'Female',
