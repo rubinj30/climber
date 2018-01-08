@@ -243,6 +243,29 @@ User.remove({}).then(() => {
         skillLevel: 'Advanced',
         photo: 'https://i.imgur.com/UQpIGfj.png'
     })
+
+    const joshuaTree = new Destination({
+        name: 'Joshua Tree',
+        city: 'Palm Springs',
+        state: 'CA',
+        location: '33.88, -116.227',
+        type: 'Traditional and Sport Climbing',
+        description: 'Joshua Tree is a world famous area with thousands of routes, countless boulder problems and a very limited number of campsites.',
+        photo: 'https://i.imgur.com/ze5DMb5.png'
+    })
+
+    const someRoute = new Climb({
+        name: 'Funtown',
+        type: 'Sport',
+        grade: '5.13b',
+        completed: 'Yes',
+        gearNeeded: '8 quickdraws and anchors',
+        photo: 'https://i.imgur.com/8R9UiDl.png',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    })
+    
+    joshuaTree.climbs.push(someRoute)
+    margo.destinations.push(joshuaTree)
     return margo.save()
 }).catch((err) => {
     console.log(`*** ERROR SEEDING DATA ${err}`)

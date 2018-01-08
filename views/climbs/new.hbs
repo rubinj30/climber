@@ -1,8 +1,9 @@
 <div class="path">
-    <a class='path-color' href="/users">Climbers</a> /
-    <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> /
-    <a class='path-color' href="/users/{{user._id}}/destinations">Climbing Destinations</a> /
-    <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}/">{{destination.name}}</a> / Add Climb
+    <a class='path-color' href="/users">Climbers</a> >
+    <a class='path-color' href="/users/{{user._id}}/">{{user.username}}</a> >
+    <a class='path-color' href="/users/{{user._id}}/destinations">Climbing Destinations</a> >
+    <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}/">{{destination.name}}</a> >
+    <a class='path-color' href="/users/{{user._id}}/destinations/{{destination._id}}/climbs/new">Add Climb</a>
 </div>
 
 <h4>Add Climb</h4>
@@ -31,8 +32,7 @@
 
             <div>
                 <label for="photo">Photo: </label>
-                <input type="text" name="photo" value='https://i.imgur.com/RxTRYBX.png'
-                    required />
+                <input type="text" name="photo" value='https://i.imgur.com/RxTRYBX.png' required />
             </div>
             <div>
                 <p>What type of climb is it? </p>
@@ -63,11 +63,16 @@
                 <label for="status3">Haven't tried yet</label>
             </div>
         </div>
-        <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Climb</button>
+        <div class='bottom-buttons'>
+            <div class='bottom-button'>
+                <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Submit</button>
+            </div>
+            <div class='bottom-button'>
+                <a class="btn waves-effect waves-light button-colors" href="/users/{{user._id}}/destinations/{{destination._id}}">
+                    Cancel
+                </a>
+            </div>
+        </div>
 
-</div>
-</form>
-<button class="btn waves-effect waves-light button-colors">
-    <a href="/users/{{user._id}}/destinations/{{destination._id}}">Cancel</a>
-</button>
+    </form>
 </div>

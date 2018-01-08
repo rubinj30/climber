@@ -36,13 +36,16 @@
                 <label for="description">Add a brief description of the area: </label>
                 <input type="text" name="description" />
             </div>
-
-            <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Add Destination</button>
-
-
+            <div class='bottom-buttons'>
+                <div class='bottom-button'>
+                    <button class="btn waves-effect waves-light button-colors" type="submit" name="action">Submit</button>
+                </div>
+                <div class='bottom-button'>
+                    <a class="btn waves-effect waves-light button-colors" href="/users/{{user._id}}/destinations">
+                        Cancel
+                    </a>
+                </div>
+            </div>
         </div>
     </form>
-    <button class="btn waves-effect waves-light button-colors">
-        <a href="/users/{{user._id}}/destinations/">Cancel</a>
-    </button>
 </div>
