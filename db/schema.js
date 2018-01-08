@@ -65,10 +65,6 @@ const UserSchema = new Schema(
     age: Number,
     gender: String,
     livesIn: String,
-    userCreated: {
-        type: Date,
-        default: Date.now
-    },
     likesToClimb: String,
     skillLevel: String,
     climbingPartnerStatus: String,
