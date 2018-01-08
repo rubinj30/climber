@@ -181,7 +181,7 @@ User.remove({}).then(() => {
         photo: 'https://cdn-files.apstatic.com/climb/106392755_medium_1494104543.jpg'
     })
     leda.climbs.push(speedwayBoogie)
-    lynnHill.destinations.push(redRiver, leda)
+    lynnHill.destinations.push(redRiver, redRocks, leda)
     return lynnHill.save()
 }).then(() => {
     const sam = new User({
@@ -207,6 +207,7 @@ User.remove({}).then(() => {
         photo: 'https://i.imgur.com/ffUPQ34.jpg'
     })
     return sam.save()
+    return margo.save()
 
 }).catch((err) => {
     console.log(`*** ERROR SEEDING DATA ${err}`)
