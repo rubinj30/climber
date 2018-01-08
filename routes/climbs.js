@@ -86,14 +86,15 @@ router.put('/:climbId', (request, response) => {
     const destinationId = request.params.destinationId
     const climbId = request.params.climbId
     const updatedClimbInfo = request.body
+    console.log(request.body)
     User.findById(userId)
         .then((user) => {
             const destination = user.destinations.id(destinationId)
             const climb = destination.climbs.id(climbId)
             console.log(climb)
             climb.name =  updatedClimbInfo.name
-            climb.city =  updatedClimbInfo.grade
-            climb.state =  updatedClimbInfo.gearNeeded
+            climb.grade =  updatedClimbInfo.grade
+            climb.gearNeeded =  updatedClimbInfo.gearNeeded
             climb.description = updatedClimbInfo.description
             climb.photo = updatedClimbInfo.photo
             climb.type = updatedClimbInfo.type

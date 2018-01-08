@@ -56,9 +56,9 @@ User.remove({}).then(() => {
         grade: 'V4',
         completed: 'Yes',
         gearNeeded: 'Crashpad',
-        photo: 'https://i.imgur.com/RrZOBgb.jpg'
+        photo: 'https://i.imgur.com/RrZOBgb.jpg',
+        description: 'Yellow Wall Area. Tall arete on the backside of Yellow Wall. You can\'t miss it. Lorem ipsumm lorem ipsum.'
     })
-    // const keeper = 
     boatRock.climbs.push(wavesInMotion, yellowArete)
     const sandRock = new Destination({
         name: 'Sand Rock',
@@ -98,8 +98,7 @@ User.remove({}).then(() => {
         completed: 'Haven\t tried it',
         gearNeeded: 'None',
         photo: 'http://www.ssclimbing.com/docs/2015/kennesaw/04.jpg',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s\
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
 
     })
     const redProblem = new Climb({
@@ -142,7 +141,8 @@ User.remove({}).then(() => {
         grade: '5.11b',
         completed: 'Not yet but I\'m working on it',
         gearNeeded: '8 quickdraws and anchors',
-        photo: 'https://cdn-files.apstatic.com/climb/107404089_medium_1494186810.jpg'
+        photo: 'https://cdn-files.apstatic.com/climb/107404089_medium_1494186810.jpg',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     })
     const goldenTicket = new Climb({
         name: 'Golden Ticket',
@@ -150,7 +150,8 @@ User.remove({}).then(() => {
         grade: '5.14c',
         completed: 'Yes',
         gearNeeded: '10 quickdraws and anchors',
-        photo: 'https://i.imgur.com/EbEP5tU.png'
+        photo: 'https://i.imgur.com/EbEP5tU.png',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     })    
     redRiver.climbs.push(goldenTicket, amarillo)
     const redRocks = new Destination({
@@ -169,7 +170,8 @@ User.remove({}).then(() => {
         grade: 'V5',
         completed: 'Haven\'t tried it yet',
         gearNeeded: 'Standard Trad rack',
-        photo: 'https://i.imgur.com/2gjioIN.jpg'
+        photo: 'https://i.imgur.com/2gjioIN.jpg',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     })
     const something = new Climb({
         name: 'Waterworld',
@@ -177,7 +179,8 @@ User.remove({}).then(() => {
         grade: '5.12b',
         completed: 'Yes',
         gearNeeded: '9 quickdraws and anchors',
-        photo: 'https://cdn-files.apstatic.com/climb/111115198_large_1494340342.jpg'
+        photo: 'https://cdn-files.apstatic.com/climb/111115198_large_1494340342.jpg',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     })
 
     redRocks.climbs.push(cuttingEdge, something)
