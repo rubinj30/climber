@@ -6,8 +6,8 @@ const bodyParser = require('body-parser')
 
 router.get('/', (request, response) => {
     const userId = request.params.userId
-    
-    User.findById(userId)   
+
+    User.findById(userId)
         .then((user) => {
             response.render('destinations/index', {
                 userId: user._id,
@@ -29,9 +29,9 @@ router.get('/new', (request, response) => {
             response.render('destinations/new', {
                 user,
                 pageTitle: "Add Climbing Destination"
+            })
         })
-    })
-    
+
 })
 
 
@@ -58,19 +58,19 @@ router.get('/:destinationId', (request, response) => {
 router.post('/', (request, response) => {
     const userId = request.params.userId
     const newDestination = request.body
-  
+
     User.findById(userId)
-      .then((user) => {
-        user.destinations.push(newDestination)
-        return user.save()
-      })
-      .then(() => {
-        response.redirect(`/users/${userId}/destinations`)
-      })
-      .catch((error) => {
-        console.log(error)
-   })
-  
+        .then((user) => {
+            user.destinations.push(newDestination)
+            return user.save()
+        })
+        .then(() => {
+            response.redirect(`/users/${userId}/destinations`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+
 })
 
 router.get('/:destinationId/edit', (request, response) => {
@@ -88,8 +88,8 @@ router.get('/:destinationId/edit', (request, response) => {
         })
         .catch((error) => {
             console.log(error)
-      })
-  })
+        })
+})
 
 router.put('/:destinationId', (request, response) => {
     const userId = request.params.userId
@@ -98,20 +98,20 @@ router.put('/:destinationId', (request, response) => {
     User.findById(userId)
         .then((user) => {
             const destination = user.destinations.id(destinationId)
-            destination.name =  updatedDestinationInfo.name
-            destination.city =  updatedDestinationInfo.city
-            destination.state =  updatedDestinationInfo.state
+            destination.name = updatedDestinationInfo.name
+            destination.city = updatedDestinationInfo.city
+            destination.state = updatedDestinationInfo.state
             // destination.indoorOrOutdoor =  updatedDestinationInfo.indoorOrOutdoor
             destination.description = updatedDestinationInfo.description
             destination.photo = updatedDestinationInfo.photo
-            return user.save()         
+            return user.save()
             console.log(user)
-    }).then(() => {
-        response.redirect(`/users/${userId}/destinations/${destinationId}`)
-    }).catch((err) => {
-        console.log(err)
-    })
-    
+        }).then(() => {
+            response.redirect(`/users/${userId}/destinations/${destinationId}`)
+        }).catch((err) => {
+            console.log(err)
+        })
+
 })
 
 router.get('/:destinationId/delete', (request, response) => {

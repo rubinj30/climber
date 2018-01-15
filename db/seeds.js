@@ -17,10 +17,10 @@ mongoose.connection.on('error', (error) => {
 })
 
 User.remove({}).then(() => {
-    const adamOndra = new User({
+    const deanO = new User({
         username: 'Ad-Ondra',
         email: 'adam@me.com',
-        age: 25,
+        age: 35,
         gender: 'Male',
         livesIn: 'Marietta, GA',
         climbingPartnerStatus: 'Looking for climbing partner(s)',
