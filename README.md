@@ -3,7 +3,7 @@
 This is an app that makes it easier to find other climbers with similar climbing styles, levels of skill, and favorite destinations. Or you can just see what others in your area are climbing. 
 ____
 ## Link to site
-https://shrouded-mesa-61813.herokuapp.com/
+https://partner-in-climb.herokuapp.com/
 ____
 #### Technologies/Frameworks used:
 MEN stack:
