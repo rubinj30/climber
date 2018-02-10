@@ -17,7 +17,7 @@ mongoose.connection.on('error', (error) => {
 })
 
 User.remove({}).then(() => {
-    const deanO = new User({
+    const adamOndra = new User({
         username: 'Ad-Ondra',
         email: 'adam@me.com',
         age: 35,
@@ -263,9 +263,20 @@ User.remove({}).then(() => {
         photo: 'https://i.imgur.com/8R9UiDl.png',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     })
-
     joshuaTree.climbs.push(someRoute)
-    margo.destinations.push(joshuaTree)
+    
+    const mtYonah = new Destination({
+        name: 'Mount Yonah',
+        city: 'Cleveland',
+        state: 'GA',
+        location: '34.637, -83.714',
+        type: 'Traditional and Sport Climbing',
+        description: 'Joshua Tree is a world famous area with thousands of routes, countless boulder problems and a very limited number of campsites.',
+        photo: 'https://i.imgur.com/ze5DMb5.png'
+    })
+    mtYonah.climbs.push(someRoute)
+
+    margo.destinations.push(joshuaTree, mountYonah)
     return margo.save()
 }).catch((err) => {
     console.log(`*** ERROR SEEDING DATA ${err}`)
