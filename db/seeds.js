@@ -123,8 +123,6 @@ User.remove({}).then(() => {
         likesToClimb: 'Traditional',
         climbingPartnerStatus: 'In committed climbing partnership',
         skillLevel: 'Advanced',
-        // sportClimbGrade: '5.14',
-        // boulderGrade: 'V13',
         photo: 'https://i.imgur.com/BveJhPw.jpg'
     })
     const redRiver = new Destination({
@@ -264,7 +262,6 @@ User.remove({}).then(() => {
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     })
     joshuaTree.climbs.push(someRoute)
-    
     const mountYonah = new Destination({
         name: 'Mount Yonah',
         city: 'Cleveland',
@@ -275,7 +272,6 @@ User.remove({}).then(() => {
         photo: 'https://i.imgur.com/ze5DMb5.png'
     })
     mountYonah.climbs.push(someRoute)
-
     margo.destinations.push(joshuaTree, mountYonah)
     return margo.save()
 }).catch((err) => {
