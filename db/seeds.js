@@ -265,7 +265,7 @@ User.remove({}).then(() => {
     })
     joshuaTree.climbs.push(someRoute)
     
-    const mtYonah = new Destination({
+    const mountYonah = new Destination({
         name: 'Mount Yonah',
         city: 'Cleveland',
         state: 'GA',
@@ -274,7 +274,7 @@ User.remove({}).then(() => {
         description: 'Joshua Tree is a world famous area with thousands of routes, countless boulder problems and a very limited number of campsites.',
         photo: 'https://i.imgur.com/ze5DMb5.png'
     })
-    mtYonah.climbs.push(someRoute)
+    mountYonah.climbs.push(someRoute)
 
     margo.destinations.push(joshuaTree, mountYonah)
     return margo.save()
