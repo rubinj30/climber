@@ -2,13 +2,17 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 const User = require('../db/models/User')
 // const Destination = require('../db/models/Destination')
+const axios = require('axios')
 const bodyParser = require('body-parser')
 
 router.get('/', (request, response) => {
     const userId = request.params.userId
-
     User.findById(userId)
         .then((user) => {
+            const cities = user.destinations.map((destination) => {
+                return destination.city
+            })
+            console.log(cities)
             response.render('destinations/index', {
                 userId: user._id,
                 username: user.username,
@@ -31,7 +35,6 @@ router.get('/new', (request, response) => {
                 pageTitle: "Add Climbing Destination"
             })
         })
-
 })
 
 
