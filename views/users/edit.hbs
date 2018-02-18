@@ -1,6 +1,6 @@
 <div class="path">
     >
-    <a class='path-color' href="/users"> Climbers</a> > 
+    <a class='path-color' href="/users"> Climbers</a> >
     <a class='path-color' href="/users/{{user._id}}">{{user.username}}</a> >
     <a class='path-color' href="/users/{{user._id}}/edit">Edit Profile</a>
 </div>
@@ -29,10 +29,17 @@
                     <input type="text" name="gender" value="{{user.gender}}" />
                 </div>
                 <div>
-                    <label for="likesToClimb">What Is Your Favorite Style of Climbing? </label>
+                    <label for="likesToClimb">What Is Your Favorite Style of Climbing? (Traditional, Sport, Bouldering, or All of it) </label>
                     <input type="text" name="likesToClimb" value="{{user.likesToClimb}}" />
                 </div>
-
+                <div>
+                    <label for="skillLevel">What would you consider your skill level? (Beginner, Intermediate, or Advanced) </label>
+                    <input type="text" name="skillLevel" value="{{user.skillLevel}}" />
+                </div>
+                <div>
+                    <label for="climbingPartnerStatus">Climbing Partner Status:</label>
+                    <input type="text" name="climbingPartnerStatus" value="{{user.climbingPartnerStatus}}" />
+                </div>
                 <div>
                     <label for="photo">Photo: </label>
                     <input type="text" name="photo" value='{{user.photo}}' required />

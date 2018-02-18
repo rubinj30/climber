@@ -30,7 +30,7 @@ User.remove({}).then(() => {
         // sportClimbGrade: '5.15',
         // tradGrad: '5.14',
         // boulderGrade: 'V16',
-    photo: 'https://i.imgur.com/NbV0SnR.jpg'
+        photo: 'https://i.imgur.com/NbV0SnR.jpg'
     })
     const boatRock = new Destination({
         name: 'Boat Rock',
@@ -68,7 +68,7 @@ User.remove({}).then(() => {
         typeOfClimbing: 'Sport Climbing',
         description: 'Accessible single-pitch sport climbing',
         photo: 'https://i.pinimg.com/originals/b4/35/d8/b435d8d6b70c19848d7ac73e2546049a.jpg'
-    
+
     })
     const misty = new Climb({
         name: 'Misty',
@@ -150,7 +150,7 @@ User.remove({}).then(() => {
         gearNeeded: '10 quickdraws and anchors',
         photo: 'https://i.imgur.com/EbEP5tU.png',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    })    
+    })
     redRiver.climbs.push(goldenTicket, amarillo)
     const redRocks = new Destination({
         name: 'Red Rock National Park',
@@ -274,12 +274,82 @@ User.remove({}).then(() => {
     mountYonah.climbs.push(someRoute)
     margo.destinations.push(joshuaTree, mountYonah)
     return margo.save()
-}).catch((err) => {
-    console.log(`*** ERROR SEEDING DATA ${err}`)
 }).then(() => {
-    mongoose.connection.close()
-    console.log(`
+    const tommy = new User({
+        username: "tomCaldwell81",
+        email: 'tcald@something.com',
+        age: 35,
+        gender: 'Male',
+        livesIn: 'Carbondale, CO',
+        likesToClimb: 'Traditional',
+        climbingPartnerStatus: 'In committed climbing partnership',
+        skillLevel: 'Advanced',
+        photo: 'https://i.imgur.com/YQGyh3h.png'
+    })
+    const estesPark = new Destination({
+        name: 'Estes Park',
+        city: 'Carbondale',
+        state: 'CO',
+        location: '40.398, -105.518',
+        type: 'Traditional Climbing',
+        description: 'Estes Park Valley has a good variety of granitic, gneiss, and schist crags scattered along the hillsides and in the forests surrounding this small town of approximately 7,500 people located at 7,550 feet above sea level. The crags in this area lies primarily in the 7,000-11,000 foot altitudes. While much of the climbing here is done during the warmer months, it is possible to climb year round with good weather and warm clothing.',
+        photo: 'https://i.imgur.com/az4YWrY.png'
+    })
+
+    const someRoute = new Climb({
+        name: "Can't or won't",
+        type: 'Trad',
+        grade: '5.10c',
+        completed: 'Yes',
+        gearNeeded: 'There is difficult to place protection on this one bolt route. Cams to 1-1/2 - 2 inches and small to medium size nuts for the cracks near the top.',
+        photo: 'https://i.imgur.com/8R9UiDl.png',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    })
+    const penguinArete = new Climb({
+        name: "Penguin Arete",
+        type: 'Trad',
+        grade: '5.11b',
+        completed: 'Yes',
+        gearNeeded: 'There is difficult to place protection on this one bolt route. Cams to 1-1/2 - 2 inches and small to medium size nuts for the cracks near the top.',
+        photo: 'https://i.imgur.com/2iAa5rT.png',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    })
+    estesPark.climbs.push(someRoute, penguinArete)
+    const leda2 = new Destination({
+        name: 'Leda',
+        city: 'Chattanooga',
+        state: 'TN',
+        location: '35.236, -85.227',
+        type: 'Traditional and Sport Climbing',
+        description: 'Roadside crag along the winding roads of Chattanooga. It is mostly Sport climbing with some Traditional mixed in.'
+    })
+    const speedwayBoogie = new Climb({
+        name: 'Speedway Boogie',
+        type: 'Sport Climbing',
+        grade: '5.10b',
+        completed: 'Yes',
+        gearNeeded: '6 quickdraws and anchors',
+        photo: 'https://cdn-files.apstatic.com/climb/106392755_medium_1494104543.jpg'
+    })
+    const cuttingEdge = new Climb({
+        name: 'Cutting Edge',
+        type: 'Boulder',
+        grade: 'V5',
+        completed: 'Haven\'t tried it yet',
+        gearNeeded: 'Standard Trad rack',
+        photo: 'https://i.imgur.com/2gjioIN.jpg',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    })
+    leda2.climbs.push(speedwayBoogie)
+    tommy.destinations.push(estesPark, leda2)
+
+    return tommy.save().catch((err) => {
+        console.log(`*** ERROR SEEDING DATA ${err}`)
+    }).then(() => {
+        mongoose.connection.close()
+        console.log(`
     Finished seeding the database
     
     Disconnected from Mongo DB`)
+    })
 })
